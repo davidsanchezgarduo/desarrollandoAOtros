@@ -1,0 +1,267 @@
+<!-- estilos de la pagina -->
+<style>
+        #slide1, #slide2 {
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            font-size: 20px;
+        }
+        #slide2 {
+            /*background: url("paginas/img/img_4.jpg") no-repeat;*/
+            background: #f0a10e;
+        }
+        #carousel3 #ins2 {
+            width: 80px;
+            position: absolute;
+            -webkit-transform: rotate(-130deg);
+            -moz-transform: rotate(-130deg);
+            -ms-transform: rotate(-130deg);
+            transform: rotate(-130deg);
+            left:48%;
+            top:82%;
+        }
+        .dialogos {
+            width:1200px; 
+            height:600px;
+            background: #fff;
+            font-size: 1.6em;
+            text-align: center;
+          }
+        .dialogos .container_modal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2em  0.5em 0.5em 0.5em;
+        }
+        .dialogos .container_modal p {
+            margin:1.5em 0;
+        }
+        a, a:hover {
+            color: #fff;
+        }
+        #bgVideo3 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: -1000; 
+            overflow: hidden; 
+        }
+        </style>
+        
+        <!-- Elementos de la pagina -->
+        
+        <div id="carousel3" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel3" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel3" data-slide-to="1"></li>
+            </ol>
+              
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <!--Seccion 1-->
+                <div id="slide1" class="item active">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h1 class="titulo">Embajador de marca</h1>
+                            <h2 class="txt1">Tu rol como líder…</h2>
+                            <h2 class="txt2"><b>Inspirar y desarrollar</b> a la siguiente <b>generación de líderes</b>, actuando coherentemente con los <b>valores</b> de la <b>organización</b>, <b>logrando que otros trasciendan contigo</b>.</h2>
+                            <h2 class="txt3">Continúa revisando el contenido y sé un líder que trasciende en el tiempo.</h2>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <a href="javascript:void(0)" id="video-trigger3">
+                                <h2 class="txtbtn">Da clic en el siguiente botón</h2>
+                                <button onClick="audioPause()" id="btnVideo" class="btn btn-default btn-lg text-center"><span class="glyphicon glyphicon-facetime-video"></span>&nbsp;&nbsp;Saber más</button>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            &nbsp;
+                        </div>
+                    </div>
+                     <!--Video de fondo -->
+                    <video autoplay muted loop id="bgVideo3">
+                        <source src="paginas/videos/intro_b.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <!--Seccion 2-->
+                <div id="slide2" class="item">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h1 class="titulo">¿Tomaste nota?</h1>
+                            <h2 class="txt1">A continuación te presentamos la siguiente actividad para reforzar el aprendizaje obtenido.</h2>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <a href="#dialog_3" name="modal">
+                                <h2 class="txtbtn2 mt_5">Da clic en el siguiente botón:</h2>
+                                <button id="btnJuego3" onClick="audioPause()" class="btn btn-default btn-lg text-center"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;¡Empecemos!</button>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            &nbsp;
+                        </div>
+                    </div>
+                  <!--  <div id="ins" class="mano3">
+                        <img src="img/tap_bco.svg" width="80">
+                    </div>-->
+                </div>
+            </div>
+
+            <div id="ins2">
+                <img src="img/tap_bco.svg" width="80">
+            </div>
+        </div>
+            
+       
+            
+
+        <!-- Modal JUEGO -->
+        <div id="boxes">
+            <div id="dialog_3" class="window dialogos">
+                <!-- empieza contenido -->
+                <div class="container_modal">
+                    <iframe src="game1/game1.html" frameborder="0" scrolling-x="no"></iframe>
+                </div>
+                <!-- fin contenido -->
+                <a href="#" class="pagijuego close" data-slide="4">&times;</a>
+            </div>
+            <div id="mask"></div>
+        </div>
+
+        <!-- audio -->
+        <audio class="voz" id="audio31" src="paginas/audios/inspirar_4.mp3" preload="Cargando audio"></audio>
+        <audio class="voz" id="audio32" src="paginas/audios/inspirar_5.mp3" preload="Cargando audio"></audio>
+
+
+        <!--video -->
+        <div id="video3">
+        <div id="videCont">
+            <video id="roluser3" controls>
+            <source src="paginas/videos/3.mp4" type="video/mp4">
+            </video>
+            </div>
+        </div>
+
+        <!-- Funciones de la pagina -->
+        <script type="text/javascript" src="js/modal.js"></script>
+        <script type="text/javascript" src="js/videopopup.js"></script>
+        <script type="text/javascript" src="js/slides2.js"></script>
+        <script>
+        $(document).ready(function() {
+            $(".titulo, .txt1, .txt2, #ins, #ins2, #btnVideo, #btnJuego3, .txt3, .nav-dots, .carousel-indicators, .txtbtn, .txtbtn2").hide();
+
+            // video
+            $(function () {
+                $('#video3').VideoPopUp({
+                opener: "video-trigger3",
+                idvideo: "roluser3",
+                pausevideo: true,
+                backgroundColor: "#000000",
+                maxweight: "800"
+                });
+            });
+        
+            // slide horizontal
+            $('.carousel3').carousel({
+            interval: false,
+            })
+
+            // controlar eventos por el carrusel
+            $('#carousel3').on('slide.bs.carousel', function(ev){
+                var id = ev.relatedTarget.id;
+                if(id == "slide1"){
+                    rep31();
+                    pausarOtros();
+                }
+                if(id == "slide2"){
+                    rep32();
+                    pausarOtros();
+                    outins2();
+                    $(".nav-dots").hide();
+                }
+            });
+            
+            // animaciones slide 1
+            $("#slide1 #bgVideo3").animateCss('fadeIn', rep31);
+            $("#slide1 .titulo").show();
+            $("#slide1 .titulo").animateCss('zoomIn slower', txt11);
+
+            function txt11(){
+                $("#slide1 .titulo").animateCss('fadeOut slower');
+                $("#slide1 .titulo").hide();
+                $("#slide1 .txt1").show();
+                $("#slide1 .txt1").animateCss('fadeIn slower', txt12);
+
+            }
+            function txt12(){
+                $("#slide1 .txt2").show();
+                $("#slide1 .txt2").animateCss('fadeIn slower', txt13);
+            }
+            function txt13(){
+                $("#slide1 .txt3").show();
+                $("#slide1 .txt3").animateCss('fadeIn slower', vid);
+            }
+            function vid(){
+                $(".txtbtn").show();
+                $(".txtbtn").animateCss('bounceIn slower');
+                $("#btnVideo").show();
+                $("#btnVideo").animateCss('bounceIn slower', ins2);
+            }
+
+            // animaciones slide 2
+            $("#slide2 .titulo").show(rep32);
+            $("#slide2 .titulo").animateCss('zoomIn slow', txt14);
+
+            function txt14(){
+                $("#slide2 .txt1").show();
+                $("#slide2 .txt1").animateCss('fadeIn slower', jueg);
+            }
+            function jueg(){
+                $(".txtbtn2").show();
+                $(".txtbtn2").animateCss('bounceIn slower');
+                $("#slide2 #btnJuego3").show();
+                $("#slide2 #btnJuego3").animateCss('bounceIn slower');
+            }
+
+
+           /* function ins(){
+                $("#fnd52 #ins").show();
+                $("#fnd52 #ins").animateCss('bounceInUp', botones33);
+            }*/
+           /* function botones33(){ 
+                $( ".nav-dots" ).fadeIn();
+            };*/
+            function ins2(){
+                $("#ins2").show();
+                $("#ins2").animateCss('bounceInDown', botones2);
+            }
+            function botones2(){
+                $(".carousel-indicators").show();
+                $(".carousel-indicators").animateCss('fadeIn');
+            };
+            function outins2(){
+                $("#ins2").animateCss('fadeOut slower');
+                $("#ins2").hide();
+            };
+
+            function rep31(){
+                audio31.play();
+            }
+            function rep32(){
+                audio32.play();
+            }
+
+            // pausar otros audios
+            function pausarOtros(){
+                $('.voz').on('play', function () { //cuando un audio empieza a reproducirse
+                var current=this;
+                    $('.voz').each(function() { 
+                        if (this!== current) { //todos los demás
+                        this.pause();  //los pausamos
+                        }
+                    });
+                });
+            }
+        });
+        </script>

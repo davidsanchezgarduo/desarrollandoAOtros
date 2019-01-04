@@ -1,0 +1,142 @@
+/* Menu 1 */
+
+ul.menu_vertical1{
+    font-family: verdana;
+    font-size: 10pt;
+    width: 300px;
+}
+
+ul.menu_vertical1 li{
+    list-style: none;
+    line-height: 35px;
+    padding-left: 40px;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+ul.menu_vertical1 li a{
+    text-decoration: none;
+    color: black;
+}
+
+ul.menu_vertical1 li:nth-child(1){
+    background-image: url(../imagenes/img1.png);
+}
+ul.menu_vertical1 li:nth-child(2){
+    background-image: url(../imagenes/img2.png);
+}
+ul.menu_vertical1 li:nth-child(3){
+    background-image: url(../imagenes/img3.png);
+}
+ul.menu_vertical1 li:nth-child(4){
+    background-image: url(../imagenes/img4.png);
+}
+ul.menu_vertical1 li:nth-child(5){
+    background-image: url(../imagenes/img5.png);
+}
+ul.menu_vertical1 li:nth-child(6){
+    background-image: url(../imagenes/img6.png);
+}
+ul.menu_vertical1 li:nth-child(7){
+    background-image: url(../imagenes/img7.png);
+}
+ul.menu_vertical1 li:nth-child(8){
+    background-image: url(../imagenes/img8.png);
+}
+
+ul.menu_vertical1 li:nth-child(1):hover{
+    background-image: url(../imagenes/img1A.png);
+}
+ul.menu_vertical1 li:nth-child(2):hover{
+    background-image: url(../imagenes/img2A.png);
+}
+ul.menu_vertical1 li:nth-child(3):hover{
+    background-image: url(../imagenes/img3A.png);
+}
+ul.menu_vertical1 li:nth-child(4):hover{
+    background-image: url(../imagenes/img4A.png);
+}
+ul.menu_vertical1 li:nth-child(5):hover{
+    background-image: url(../imagenes/img5A.png);
+}
+ul.menu_vertical1 li:nth-child(6):hover{
+    background-image: url(../imagenes/img6A.png);
+}
+ul.menu_vertical1 li:nth-child(7):hover{
+    background-image: url(../imagenes/img7A.png);
+}
+ul.menu_vertical1 li:nth-child(8):hover{
+    background-image: url(../imagenes/img8A.png);
+}
+
+
+
+
+
+
+/*  Menu 2  */
+
+ul.menu_vertical2{
+    font-family: verdana;
+    font-size: 10pt;
+    width: 190px;
+}
+
+ul.menu_vertical2 li{
+    list-style: none;
+    line-height: 35px;
+}
+
+ul.menu_vertical2 li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 3px;
+    padding-left: 15px;
+    width: 190px;
+    background-color: #036;
+    border-bottom: 1px solid #eee;
+}
+
+ul.menu_vertical2 li a:hover
+{
+    background-color: #369;
+    color: #fff;
+}
+
+
+
+
+
+/*  Menu 3  */
+
+ul.menu_vertical3{
+    font-family: verdana;
+    font-size: 10pt;
+    width: 223px;
+}
+
+ul.menu_vertical3 li{
+    list-style: none;
+    line-height: 35px;
+    border-top: 1px solid #888;
+}
+
+ul.menu_vertical3 li a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 3px;
+    padding-left: 15px;
+    width: 190px;
+    background-color: #ddd;
+    border-left: 15px solid #000;
+}
+
+ul.menu_vertical3 li a:hover
+{
+    background-color: #444;
+    color: #fff;
+    border-color: #FE3;
+}
+

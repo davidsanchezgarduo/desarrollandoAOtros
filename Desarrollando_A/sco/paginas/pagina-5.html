@@ -1,0 +1,399 @@
+<!-- estilos de la pagina -->
+<style>
+        #slide9, #slide10, #slide11, #slide12 {
+            background: #f0a10e;
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+        #slide9 h1 {
+            font-size: 6rem;
+            padding: 0.5em 0;
+            margin:0.5em 0;
+        }
+        #slide9 h1 span {
+            background: #fff;
+            color: #f0a10e;
+            padding: 0 0.5em;
+        }
+        #slide9 .fondo {
+            position: absolute;
+            right:50px;
+            top:0px;
+            z-index: 1;
+            width: 50%;
+            height: 100%;
+            background: url("paginas/img/bg4.png");
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        #bgVideo52, #bgVideo53, #bgVideo54 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: -1000; 
+            overflow: hidden; 
+        }
+
+
+
+        #video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: 20;
+        }
+        .titulo {
+            color:#FFF;
+        }
+        .txt1 {
+            color:#FFF;
+        }
+        button {
+            font-size: 2.2rem;
+        }
+        #ins {
+            width: 80px;
+            position: absolute;
+            -webkit-transform: rotate(-250deg);
+            -moz-transform: rotate(-250deg);
+            -ms-transform: rotate(-250deg);
+            transform: rotate(-250deg);
+            right:4%;
+            top:58%;
+        }
+        #ins2 {
+            width: 80px;
+            position: absolute;
+            -webkit-transform: rotate(-130deg);
+            -moz-transform: rotate(-130deg);
+            -ms-transform: rotate(-130deg);
+            transform: rotate(-130deg);
+            left:46.5%;
+            top:82%;
+        }
+        .dialogo {
+            width:80%; 
+            height:80%;
+            background: #fff;
+            font-size: 1.6em;
+            text-align: center;
+          }
+          .container_modal {
+                display: flex;
+            justify-content: center;
+          align-items: center;
+              padding: 1.5em  0.5em 0.5em 0.5em;
+              
+          }
+          .container_modal p {
+              margin:1.5em 0;
+          }
+          .mano5 {
+            top:50%;
+        }
+        a, a:hover {
+              color: #fff;
+          }
+          ul.ul_1 li{
+            margin-bottom: 0.7em;
+          }
+        </style>
+        
+        
+        
+        <!-- Elementos de la pagina -->
+        <div id="carousel5" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel5" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel5" data-slide-to="1"></li>
+                  <li data-target="#carousel5" data-slide-to="2"></li>
+                  <li data-target="#carousel5" data-slide-to="3"></li>
+                </ol>
+              
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <!--seccion 1-->
+                    <div id="slide9" class="item active">
+                            <div class="fondo fg"></div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <p>&nbsp;</p>
+                                <h1 class="titulo">Coaching<br><span>y retroalimentación</span></h1>
+                             </div>
+                            <div class="col-md-4">&nbsp;</div>
+                        </div>
+                    </div>
+
+                    <!--seccion 2-->
+                    <div id="slide10" class="item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h1 class="titulo">COACHING COMO HERRAMIENTA DE RETROALIMENTACIÓN</h1>
+                                <p class="txt1">El rol del coach es <b>hacer preguntas que estimulen a reflexionar, a recapacitar críticamente</b>, favoreciendo así el desarrollo profesional y el crecimiento personal. <b>¡Inspira!</b></p>
+                                <p class="txt2">Su misión es <b>retroalimentar a cada persona, para encontrar nuevos caminos</b> y juntos, establezcan y coordinen <b>un plan de acción que permita alcanzar metas y objetivos</b>.</p>
+                                <h3 class="txt3">Epígrafe</h3>
+                                <div class="txt4 text-right">
+                                    <p>&nbsp;</p>
+                                    <p><i>Incluso la gente que afirma que no podemos hacer nada para cambiar nuestro destino, mira antes de cruzar la calle.</i></p>
+                                    <p>- Stephen Hawking</p>   
+                                </div>
+                            </div>
+                            <div class="col-md-4">&nbsp;</div>
+                        </div>
+                        <!--Video de fondo -->
+                        <video autoplay muted loop id="bgVideo52">
+                            <source src="paginas/videos/intro_b.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <!--seccion 3-->
+                    <div id="slide11" class="item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h1 class="titulo">Cualidades de un líder que retroalimenta</h1>
+                                <ul class="txt1 ul_1">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-1 text-right">
+                                                •
+                                            </div>
+                                            <div class="col-md-11">
+                                                Ve al otro como persona y no solamente como “empleado”,<br>brindando su tiempo para escuchar.
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-1 text-right">
+                                                •
+                                            </div>
+                                            <div class="col-md-11">
+                                                Ayuda a otros para que solucionen los problemas<br>a través de cuestionamientos propositivos.
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-1 text-right">
+                                                •
+                                            </div>
+                                            <div class="col-md-11">
+                                                Acompaña y alienta al otro para que descubra y fortalezca<br>sus propias habilidades.
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                &nbsp;
+                            </div>
+                        </div>
+                        <!--Video de fondo -->
+                        <video autoplay muted loop id="bgVideo53">
+                            <source src="paginas/videos/intro_b.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <!--seccion 4-->
+                    <div id="slide12" class="item">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h1 class="titulo">Características de una<br>retroalimentación concreta</h1>
+                                <ul class="txt1 ul_1">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-1 text-right">
+                                                •
+                                            </div>
+                                            <div class="col-md-11">
+                                                <b>Objetiva.</b> Basada en un plan, especificaciones de la promesa o compromiso, evidencias medibles.
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-1 text-right">
+                                                •
+                                            </div>
+                                            <div class="col-md-11">
+                                                <b>Directa.</b> Enfocada a la acción o tarea, y vinculada a la responsabilidad.
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-md-1 text-right">
+                                                •
+                                            </div>
+                                            <div class="col-md-11">
+                                                <b>Oportuna.</b> Tomando en cuenta el contexto y el momento para lograr un resultado con una experiencia de aprendizaje.
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <p class="txt2">Con el fin de construir aprendizaje, <b>al menos el 70% de la retroalimentación se debe realizar a partir de preguntas</b> con el fin de que, tanto líderes como colaboradores, generen un pensamiento crítico para el presente y el futuro.</p>
+                                <p class="txt3">En el siguiente tema podrás encontrar una herramienta complementaria para que tu retroalimentación sea efectiva.</p>
+                            </div>
+                            <div class="col-md-4">
+                                &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div id="ins" class="mano5">
+                <img src="img/tap_bco.svg" width="80">
+            </div>
+            <div id="ins2" class="mano">
+                <img src="img/tap_bco.svg" width="80">
+            </div>
+        </div>
+        
+        
+
+        <audio class="voz" id="audio74" src="paginas/audios/pantalla4_slide0.wav" preload="Cargando audio"></audio>
+        <audio class="voz" id="audio75" src="paginas/audios/pantalla4_slide1.wav" preload="Cargando audio"></audio>
+        
+
+        
+        <!-- Funciones de la pagina -->
+        <script>
+        $(document).ready(function() {
+            $(".titulo, .txt1, .txt2, .txt3, .txt4, #ins, #ins2, .nav-dots, .carousel-indicators").hide();
+        
+            $('.carousel5').carousel({
+                interval: false,
+            })
+
+            // controlar eventos por el carrusel
+            $('#carousel5').on('slide.bs.carousel', function(ev){
+                var id = ev.relatedTarget.id;
+                if(id == "slide9"){
+                    rep74();
+                    pausarOtros();
+                    $(".nav-dots").hide();
+                }
+                if(id == "slide10"){
+                    rep75();
+                    pausarOtros();
+                    outins2();
+                    $(".nav-dots").hide();
+                }
+                if(id == "slide11"){
+                    $(".nav-dots").hide();
+                    
+                }
+                if(id == "slide12"){
+                   
+                }
+            });
+
+
+            // slide 1
+            $("#slide9 .titulo").show(rep74);
+            $("#slide9 .titulo").animateCss('fadeInRight slow', ins2);
+
+            // slide 2
+            $("#slide10 .titulo").show();
+            $("#slide10 .titulo").animateCss('zoomIn slow', txt105);
+            function txt105(){
+                $("#slide10 .txt1").show();
+                $("#slide10 .txt1").animateCss('fadeIn slower', txt106);
+            }
+            function txt106(){
+                $("#slide10 .txt2").show();
+                $("#slide10 .txt2").animateCss('fadeIn slower', txt107);
+            }
+            function txt107(){
+                $("#slide10 .txt3").show();
+                $("#slide10 .txt3").animateCss('fadeIn slower', txt108);
+            }
+            function txt108(){
+                $("#slide10 .txt4").show();
+                $("#slide10 .txt4").animateCss('fadeIn slower');
+            }
+
+            // slide 3
+            $("#slide11 .titulo").show();
+            $("#slide11 .titulo").animateCss('zoomIn slow', txt119);
+            function txt119(){
+                $("#slide11 .txt1").show();
+                $("#slide11 .txt1").animateCss('fadeIn slower');
+            }
+
+            // slide 4
+            $("#slide12 .titulo").show();
+            $("#slide12 .titulo").animateCss('zoomIn slow', txt121);
+            function txt121(){
+                $("#slide12 .txt1").show();
+                $("#slide12 .txt1").animateCss('fadeIn slower', txt122);
+            }
+            function txt122(){
+                $("#slide12 .txt2").show();
+                $("#slide12 .txt2").animateCss('fadeIn slower', txt123);
+            }
+            function txt123(){
+                $("#slide12 .txt2").show();
+                $("#slide12 .txt2").animateCss('fadeIn slower', txt124);
+            }
+            function txt124(){
+                $("#slide12 .txt3").show();
+                $("#slide12 .txt3").animateCss('fadeIn slower', ins);
+            }
+
+            
+            // funciones generales
+            function ins(){
+                $("#carousel5 #ins").show();
+                $("#carousel5 #ins").animateCss('bounceInUp', botones);
+            }
+            function botones(){ 
+                $( ".nav-dots" ).fadeIn();
+            }
+
+            function ins2(){
+                $("#carousel5 #ins2").show();
+                $("#carousel5 #ins2").animateCss('bounceInDown', botones2);
+            }
+            function botones2(){
+                $(".carousel-indicators").show();
+                $(".carousel-indicators").animateCss('fadeIn');
+            };
+            function outins2(){
+                $("#carousel5 #ins2").animateCss('fadeOut slower');
+                $("#carousel5 #ins2").hide();
+           };
+
+            function rep74(){
+                audio74.play() 
+            }
+            function rep75(){
+                audio75.play() 
+            }
+
+            // pausar otros audios
+            function pausarOtros(){
+                $('.voz').on('play', function () { //cuando un audio empieza a reproducirse
+                var current=this;
+                    $('.voz').each(function() { 
+                        if (this!== current) { //todos los demás
+                        this.pause();  //los pausamos
+                        }
+                    });
+                });
+            }
+           
+        });    
+        </script>

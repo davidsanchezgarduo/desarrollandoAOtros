@@ -1,0 +1,37 @@
+/* Modal */
+/* Z-index of #mask must lower than #boxes .window */
+#mask {
+    position:absolute;
+    background-color:#000;
+    display:none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index:29;
+  } 
+  #boxes .window {
+    position:fixed;
+    display:none;
+    z-index:30;
+  }
+  /* Customize your modal window here, you can add background image too */
+  #boxes #dialog {
+    width:375px; 
+    height:203px;
+    background: #fff;
+  }
+  #boxes #indice {
+      background: #fff;
+      height: 55%;
+      width: 50%;
+  }
+#boxes .close {
+    position: absolute;
+    top:5px;
+    right:10px;
+    font-size: 50px;
+    font-weight: 100;
+    z-index: 9999;
+}

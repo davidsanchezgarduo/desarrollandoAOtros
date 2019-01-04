@@ -1,0 +1,66 @@
+/*!
+ * jQuery UI Datepicker 1.8.24
+ *
+ * Copyright 2012, AUTHORS.txt (http://jqueryui.com/about)
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://jquery.org/license
+ *
+ * http://docs.jquery.com/UI/Datepicker#theming
+ */
+.negro .ui-datepicker { width: 17em; padding: .2em .2em 0; display: none; }
+.negro .ui-datepicker .ui-datepicker-header { position:relative; padding:.2em 0; }
+.negro .ui-datepicker .ui-datepicker-prev, .negro .ui-datepicker .ui-datepicker-next { position:absolute; top: 2px; width: 1.8em; height: 1.8em; }
+.negro .ui-datepicker .ui-datepicker-prev-hover, .negro .ui-datepicker .ui-datepicker-next-hover { top: 1px; }
+.negro .ui-datepicker .ui-datepicker-prev { left:2px; }
+.negro .ui-datepicker .ui-datepicker-next { right:2px; }
+.negro .ui-datepicker .ui-datepicker-prev-hover { left:1px; }
+.negro .ui-datepicker .ui-datepicker-next-hover { right:1px; }
+.negro .ui-datepicker .ui-datepicker-prev span, .negro .ui-datepicker .ui-datepicker-next span { display: block; position: absolute; left: 50%; margin-left: -8px; top: 50%; margin-top: -8px;  }
+.negro .ui-datepicker .ui-datepicker-title { margin: 0 2.3em; line-height: 1.8em; text-align: center; }
+.negro .ui-datepicker .ui-datepicker-title select { font-size:1em; margin:1px 0; }
+.negro .ui-datepicker select.ui-datepicker-month-year {width: 100%;}
+.negro .ui-datepicker select.ui-datepicker-month, 
+.negro .ui-datepicker select.ui-datepicker-year { width: 49%;}
+.negro .ui-datepicker table {width: 100%; font-size: .9em; border-collapse: collapse; margin:0 0 .4em; }
+.negro .ui-datepicker th { padding: .7em .3em; text-align: center; font-weight: bold; border: 0;  }
+.negro .ui-datepicker td { border: 0; padding: 1px; }
+.negro .ui-datepicker td span, .negro .ui-datepicker td a { display: block; padding: .2em; text-align: right; text-decoration: none; }
+.negro .ui-datepicker .ui-datepicker-buttonpane { background-image: none; margin: .7em 0 0 0; padding:0 .2em; border-left: 0; border-right: 0; border-bottom: 0; }
+.negro .ui-datepicker .ui-datepicker-buttonpane button { float: right; margin: .5em .2em .4em; cursor: pointer; padding: .2em .6em .3em .6em; width:auto; overflow:visible; }
+.negro .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current { float:left; }
+
+/* with multiple calendars */
+.negro .ui-datepicker.ui-datepicker-multi { width:auto; }
+.negro .ui-datepicker-multi .ui-datepicker-group { float:left; }
+.negro .ui-datepicker-multi .ui-datepicker-group table { width:95%; margin:0 auto .4em; }
+.negro .ui-datepicker-multi-2 .ui-datepicker-group { width:50%; }
+.negro .ui-datepicker-multi-3 .ui-datepicker-group { width:33.3%; }
+.negro .ui-datepicker-multi-4 .ui-datepicker-group { width:25%; }
+.negro .ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header { border-left-width:0; }
+.negro .ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header { border-left-width:0; }
+.negro .ui-datepicker-multi .ui-datepicker-buttonpane { clear:left; }
+.negro .ui-datepicker-row-break { clear:both; width:100%; font-size:0em; }
+
+/* RTL support */
+.negro .ui-datepicker-rtl { direction: rtl; }
+.negro .ui-datepicker-rtl .ui-datepicker-prev { right: 2px; left: auto; }
+.negro .ui-datepicker-rtl .ui-datepicker-next { left: 2px; right: auto; }
+.negro .ui-datepicker-rtl .ui-datepicker-prev:hover { right: 1px; left: auto; }
+.negro .ui-datepicker-rtl .ui-datepicker-next:hover { left: 1px; right: auto; }
+.negro .ui-datepicker-rtl .ui-datepicker-buttonpane { clear:right; }
+.negro .ui-datepicker-rtl .ui-datepicker-buttonpane button { float: left; }
+.negro .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current { float:right; }
+.negro .ui-datepicker-rtl .ui-datepicker-group { float:right; }
+.negro .ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+.negro .ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header { border-right-width:0; border-left-width:1px; }
+
+/* IE6 IFRAME FIX (taken from datepicker 1.5.3 */
+.negro .ui-datepicker-cover {
+    position: absolute; /*must have*/
+    z-index: -1; /*must have*/
+    filter: mask(); /*must have*/
+    top: -4px; /*must have*/
+    left: -4px; /*must have*/
+    width: 200px; /*must have*/
+    height: 200px; /*must have*/
+}
