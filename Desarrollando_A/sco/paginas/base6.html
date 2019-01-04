@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>base 6</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="ContenedorPantalla" class="containerWhite">
+    <div class="bg6"></div>
+    <div class="rightContainer">
+    <div class="titulo6">
+        <h1>
+            Desarrollo
+        </h1>
+    </div>
+    <div class="descripcion6">
+        Estimulacion de las <span class="bold">capacidades</span> a partir de <span class="bold">retos significativos</span> tanto para las <span class="bold">personas</span> como para la organizacion
+    </div>
+
+    </div>
+</div>    
+    
+</body>
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script src="../js/TweenMax.min.js"></script>
+<script src="../js/animacion.js"></script>
+
+<script>
+var an = [
+"alpha",
+"izq-der",
+"der-izq",
+"arriba-abajo",
+"abajo-arriba",
+"gira",
+"explota",
+"fold",
+"drop",
+"pulsate",
+"scale",
+"shake"
+]
+    //$("rightContainer").css("opacity",1)
+
+    var obj0 = $(".rightContainer");
+    var obj1 = $(".bg6");
+    var obj2 = $(".titulo6");
+    var obj3 = $(".descripcion6");
+//animacionentrada(obj,tipo,tiempo,retardo,funcionSigue);  
+animacionentrada(obj0,an[0],0.5,0);
+animacionentrada(obj1,an[0],1,1)     
+animacionentrada(obj2,an[2],2,2)
+animacionentrada(obj3,an[2],2,3)
+   
+
+    
+</script>
+</html>
