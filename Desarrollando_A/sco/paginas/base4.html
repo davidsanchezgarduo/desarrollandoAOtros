@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>base 4</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="ContenedorPantalla" class="containerWhite">
+    <div class="bg4"></div>
+    <div class="titulo4">
+        <h1>
+            Promotor <span class="operator">+</span> Protagonista
+        </h1>
+    </div>
+    <div class="combination4">
+        <div class="combination">
+            <img class="combinationImage" src="./img/estratgia-01.png">
+            <span class="combinationText">Inspirar</span>
+        </div>
+        <div class="combination">
+            <img class="combinationImage" src="./img/formtalezas-01.png">
+            <span class="combinationText">Desarrollar</span>
+        </div>
+    </div>
+
+
+</div>    
+    
+</body>
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script src="../js/TweenMax.min.js"></script>
+<script src="../js/animacion.js"></script>
+
+<script>
+var an = [
+"alpha",
+"izq-der",
+"der-izq",
+"arriba-abajo",
+"abajo-arriba",
+"gira",
+"explota",
+"fold",
+"drop",
+"pulsate",
+"scale",
+"shake"
+]
+    
+    var obj1 = $(".bg4");
+    var obj2 = $(".titulo4");
+    //var obj3 = $(".combination4");
+//animacionentrada(obj,tipo,tiempo,retardo,funcionSigue);  
+animacionentrada(obj1,an[0],1,1)     
+animacionentrada(obj2,an[1],2,2,enterCombinations)
+//animacionentrada(obj3,an[2],2,3)
+    var timeDelay = 0
+function enterCombinations(){
+    $(".combination4").css("opacity",1);
+    $(".combination4").children().each(function(){
+        animacionentrada($(this),an[2],2,timeDelay);
+        timeDelay++;
+    });
+}
+
+    
+</script>
+</html>
