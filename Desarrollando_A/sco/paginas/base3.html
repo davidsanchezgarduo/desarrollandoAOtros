@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>base 3</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div id="ContenedorPantalla" class="container ">
+    <div class="bg3"></div>
+    <div class="lineLeft"></div>
+    <div class="lineRight"></div>
+    <div class="titulo3">
+        <h1>
+            "Las empresas son solo pactos<br>
+            entre personas".
+        </h1>
+    </div>
+    <div class="subtitulo3">
+        <h1>
+            Rafael Echeverría
+        </h1>
+    </div>
+</div>    
+    
+</body>
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script src="../js/TweenMax.min.js"></script>
+<script src="../js/animacion.js"></script>
+
+<script>
+var an = [
+"alpha",
+"izq-der",
+"der-izq",
+"arriba-abajo",
+"abajo-arriba",
+"gira",
+"explota",
+"fold",
+"drop",
+"pulsate",
+"scale",
+"shake"
+]
+    
+    var obj1 = $(".bg3");
+    var obj2 = $(".titulo3");
+    var lineLeft = $(".lineLeft");
+    var lineRight = $(".lineRight");
+    var obj3 = $(".subtitulo3");
+//animacionentrada(obj,tipo,tiempo,retardo,funcionSigue);  
+animacionentrada(obj1,an[0],1,1)     
+animacionentrada(lineLeft,an[1],1,1.5);
+animacionentrada(lineRight,an[2],1,1.5);
+animacionentrada(obj2,an[0],2,3)
+animacionentrada(obj3,an[0],2,4)
+
+
+    
+</script>
+</html>

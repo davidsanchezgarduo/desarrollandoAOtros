@@ -33,6 +33,30 @@ body{
     background-blend-mode:multiply;
 }
 
+.bg2{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0%;
+    background-image: url("../img/bg1.jpg");
+    background-size: cover;
+    background-position:50% 0%;
+    background-color: #f0a10e;
+    background-blend-mode:multiply;
+}
+
+.bg3{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    background-image: url("../img/bg1.jpg");
+    background-size: cover;
+    background-position:50% 0%;
+    background-color: #f0a10e;
+    background-blend-mode:multiply;
+}
+
 .titulo1{
     position: absolute;
     color:white;
@@ -43,9 +67,70 @@ body{
     font-size: 2em;
 }
 
+.titulo2{
+    position: absolute;
+    color:white;
+    top: 50%;
+    left: 40%;
+    width: 120%;
+    transform: translate(0%,-50%);
+    font-size: 1em;
+    padding-left: 10%; 
+}
+
+.titulo3{
+    position: absolute;
+    color:white;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1em;
+    text-align: center;
+}
+
+
 .bgwhite{
     background-color: white;
     padding:0 10% 0 2%;
     color:#f0a10e;
 }
 
+.bg2white{
+    position: relative;
+    left: -10%;
+    background-color: white;
+    width: 100%;
+    padding:0 40% 0 15%;
+    color:#f0a10e;
+    opacity: 0;
+}
+
+
+.lineLeft{
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    top:30%;
+    left: -65%;
+}
+
+.lineRight{
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    bottom:30%;
+    right: -65%;
+}
+
+.subtitulo3{
+    position: absolute;
+    color:white;
+    bottom: 25%;
+    right: 25%;
+    font-size: 0.5em;
+    text-align: left;
+    opacity: 0.6;
+}
