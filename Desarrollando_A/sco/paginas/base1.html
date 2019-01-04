@@ -9,8 +9,45 @@
 </head>
 
 <body>
-<div class="container bg1"></div>    
+<div id="ContenedorPantalla" class="container ">
+    <div class="bg1"></div>
+    <div class="titulo1">
+        <h1>
+            Desarrollando<br>
+            <span class="bgwhite">a otros</span>
+        </h1>
+    </div>
     
-
+</div>    
+    
 </body>
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script src="../js/TweenMax.min.js"></script>
+<script src="../js/animacion.js"></script>
+
+<script>
+var an = [
+"alpha",
+"izq-der",
+"der-izq",
+"arriba-abajo",
+"abajo-arriba",
+"gira",
+"explota",
+"fold",
+"drop",
+"pulsate",
+"scale",
+"shake"
+]
+    
+    var obj1 = $(".bg1");
+    var obj2 = $(".titulo1");
+
+//animacionentrada(obj,tipo,tiempo,retardo,funcionSigue);    
+animacionentrada(obj1,an[0],1,1)   
+animacionentrada(obj2,an[1],2,1.5)
+
+    
+</script>
 </html>
