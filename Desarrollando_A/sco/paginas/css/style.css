@@ -76,6 +76,18 @@ body{
     background-color: white;
 }
 
+.bg5{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0%;
+    background-image: url("../img/bg1.png");
+    background-size: cover;
+    background-position:50% 0%;
+    background-color: #f0a10e;
+    background-blend-mode:multiply;
+}
+
 .titulo1{
     position: absolute;
     color:white;
@@ -115,6 +127,15 @@ body{
     left: 10%;
 
     font-size: 1.5em;
+}
+
+.titulo5{
+    position: relative;
+    color:white;
+    width: 100%;
+    background-color:#f9bc61;
+    font-size: 1.5em;
+    padding-left: 20px;
 }
 
 
@@ -191,4 +212,25 @@ body{
     font-weight: bold;
     font-size: 2em;
     transform: translate(0%,-50%);
+}
+
+.rightContainer{
+    position: absolute;
+    top:10%;
+    left: 50%;
+    width: 50%;
+
+}
+.descripcion5{
+    position: relative;
+    left: 0%;
+    font-size: 1em;
+    color:#fedd9b;
+    padding-right: 50px;
+
+}
+
+.boldWhite{
+    color:white;
+    font-weight: bold;
 }
