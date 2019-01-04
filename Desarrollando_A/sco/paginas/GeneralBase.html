@@ -8,53 +8,65 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
-    
-    <style>
-@font-face {
-    font-family: "Century";
-    src: url("../../fonts/GOTHIC.TTF") format("opentype");
-    }
 
-        
-        .container{
-            background-color: rgba(250,250,250,0.5);
-            width: 98%;
-            margin: 1%;
-            padding: 1%;
-        }    
-        
-        .cuadrante1{
-            background-color: aqua;
-            padding: 1%;
-        }
-
-    </style>
 
 <body>
-    <div class="bg1"></div>
-<div id="ContenedorPantalla1" class="container">
+    <div id="ob0" class="bg1"></div>
+<div id="ContenedorPantalla" class="container">
     
-    <div class="row">
+<!--
+    <div class="titleSlide">
+        <h1>Este es el título</h1>
+    </div>
+-->
+    
+    <section class="row vcenter">
             <div class="col-sm-6">
-                <h1 class="cuadrante1">Texto</h1>
-                <h1 class="cuadrante1">Texto</h1>
-                <h1 class="cuadrante1">Texto</h1>
+                    
+                <h1 id="ob1" class="text-white">¿Qué vas a aprender?</h1>
+                <div id="ob2" class="text text-black"> <img class="img10" src="img/objective.svg">Objetivo</div>
+                <p id="ob3" class="text">Comprender la importancia de desarrollar habilidades para la
+mejora individual, a fin de aplicarlas en el desempeño personal y
+profesional.</p>
             </div>
             <div class="col-sm-6">
-                <h1 class="cuadrante1">Texto</h1>
-                <h1 class="cuadrante1">Texto</h1>
-                <h1 class="cuadrante1">Texto</h1>
+                <div  id="ob4" class="imageSlide">
+                    <img class="img30" src="img/analysis.svg">
+                </div>
             </div>
+    </section>
+    <section class="row vcenter">
+        
+            <div id="ob5" class="col-sm-4 card">
+                <h1 class="text-black">Texto</h1>
+                <div class="imageSlide">
+                    <img class="img20" src="img/analysis.svg">
+                </div>
+            </div>
+        
+            <div id="ob6" class="col-sm-4 card">
+                <h1 class="text-black">Texto</h1>
+                <div class="imageSlide">
+                    <img class="img20" src="img/analysis.svg">
+                </div>
+            </div>
+        
+            <div id="ob7" class="col-sm-4 card">
+                <h1 class="text-black">Texto</h1>
+                <div class="imageSlide">
+                    <img class="img20" src="img/analysis.svg">
+                </div>
+            </div>
+    
     </div>
 
 </div>    
     
 </body>
-<!--
 <script src="../js/jquery-3.1.0.min.js"></script>
 <script src="../js/TweenMax.min.js"></script>
 <script src="../js/animacion.js"></script>
--->
+
 
 <script>
 var an = [
@@ -77,7 +89,11 @@ var an = [
 //
 //animacionentrada(obj,tipo,tiempo,retardo,funcionSigue);    
 //animacionentrada(obj1,an[0],1,1)   
-//animacionentrada(obj2,an[1],2,1.5)
+//animacionentrada(obj2,an[1],2,1.5);
+
+for(var i = 1;i<=7;i++){
+  animacionentrada($("#ob" + i),an[3],1,i * 0.5);  
+}
 
     
 </script>
