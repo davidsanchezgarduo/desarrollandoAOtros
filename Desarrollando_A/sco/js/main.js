@@ -242,14 +242,14 @@ function cortinillaTween(movie){
 
 function cortinillaTweenModule(modulo,movie){
     $("#cortinilla").css("display","block");
-    $("#cortinilla").css("background-color","#4059A7");
-    $("h1").text(modulo[movie].name);
-    TweenMax.fromTo($("#cortinilla"),0.5,{left:"0%",width:"0%"},{width:"100%"});
-    TweenMax.fromTo($("#cortinilla").find("h1"),0.5,{alpha:0,scaleY:0},{scaleY:1,alpha:1,delay:1});
-    TweenMax.to($("#cortinilla").find("h1"),0.5,{alpha:0,scaleY:0,delay:3,onComplete:loadMovie});
-    TweenMax.to($("#cortinilla"),0.5,{left:"100%",delay:4}); 
+    $("#cortinilla").css("background-color","#f0a10e");
+    $("h1").text(listSlides[movie].name);
+    TweenMax.fromTo($("#cortinilla"),0.5,{top:"0%",height:"0%"},{height:"100%"});
+    TweenMax.to($("#cortinilla"),0.5,{top:"-100%",delay:1,onComplete:loadMovie}); 
+    TweenMax.to($(".SubButtonModule"),0.5,{scale:1,alpha:0.3}); 
     
     function loadMovie(){
+        TweenMax.fromTo($("#loadMovies"),1,{alpha:0},{alpha:1,delay:1});
         $("#loadMovies").attr("src","content/"+ modulo[movie].slide +"/index.html"); 
     }
 }
