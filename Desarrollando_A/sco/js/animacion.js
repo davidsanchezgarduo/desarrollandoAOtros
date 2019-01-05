@@ -48,7 +48,7 @@ for (myVar=0;myVar<objetos.length;myVar++){
  }     
 
 
-function animacionentrada(obj,tipo,tiempo,retardo,funcionSigue){
+function animacionentrada(obj,tipo,tiempo,retardo,funcionSigue,parametros){
     
     var Nombre = $(obj).attr("ID");
     var Obj_x = $(obj).attr("posx");
@@ -62,30 +62,32 @@ function animacionentrada(obj,tipo,tiempo,retardo,funcionSigue){
        funcionSigue = Nada; 
     }
     
+
+    
     switch(tipo){
             
         case "alpha":
-        TweenMax.fromTo(obj,tiempo,{opacity:0},{opacity:1,delay:retardo,onComplete:funcionSigue});
+        TweenMax.fromTo(obj,tiempo,{opacity:0},{opacity:1,delay:retardo,onComplete:funcionSigue,onCompleteParams:parametros});
         //console.log("Obj:" + Nombre + " animacion:alpha");    
         break;
         
         case "izq-der":
-        TweenMax.fromTo(obj,tiempo,{opacity:0,x:-100},{opacity:1,x:0,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue});
+        TweenMax.fromTo(obj,tiempo,{opacity:0,x:-100},{opacity:1,x:0,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue,onCompleteParams:parametros});
         //console.log("Obj:" + Nombre + " animacion:izq-der");                
         break; 
 
         case "der-izq":
-        TweenMax.fromTo(obj,tiempo,{opacity:0,x:100 },{opacity:1,x:0,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue});
+        TweenMax.fromTo(obj,tiempo,{opacity:0,x:100 },{opacity:1,x:0,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue,onCompleteParams:parametros});
         //console.log("Obj:" + Nombre + " animacion:izq-der");                
         break; 
             
         case "arriba-abajo":
-        TweenMax.fromTo(obj,tiempo,{opacity:0,y:-100},{opacity:1,y:0,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue});
+        TweenMax.fromTo(obj,tiempo,{opacity:0,y:-100},{opacity:1,y:0,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue,onCompleteParams:parametros});
         //console.log("Obj:" + Nombre + " animacion:arriba-abajo");                
         break; 
             
         case "abajo-arriba":
-        TweenMax.fromTo(obj,tiempo,{opacity:0,y:100},{opacity:1,y:0,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue});
+        TweenMax.fromTo(obj,tiempo,{opacity:0,y:100},{opacity:1,y:0,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue,onCompleteParams:parametros});
         //console.log("Obj:" + Nombre + " animacion:abajo-arriba");                
         break;             
         
@@ -132,7 +134,7 @@ function animacionentrada(obj,tipo,tiempo,retardo,funcionSigue){
         
 }
 
-function animacionsalida(obj,tipo,tiempo,retardo,funcionSigue){
+function animacionsalida(obj,tipo,tiempo,retardo,funcionSigue,parametros){
     
     var Nombre = $(obj).attr("ID");
     var Obj_x = $(obj).attr("posx");
@@ -154,27 +156,27 @@ function animacionsalida(obj,tipo,tiempo,retardo,funcionSigue){
         break;
         
         case "izq-der":
-        TweenMax.to(obj,tiempo,{opacity:0,x:100,ease:Back.easeIn,delay:retardo,onComplete:funcionSigue});
+        TweenMax.to(obj,tiempo,{opacity:0,x:100,ease:Back.easeIn,delay:retardo,onComplete:funcionSigue,onCompleteParams:parametros});
         //console.log("Obj:" + Nombre + " animacion:izq-der");                
         break; 
 
         case "der-izq":
-        TweenMax.to(obj,tiempo,{opacity:0,x:-100,ease:Back.easeIn,delay:retardo,onComplete:funcionSigue});
+        TweenMax.to(obj,tiempo,{opacity:0,x:-100,ease:Back.easeIn,delay:retardo,onComplete:funcionSigue,onCompleteParams:parametros});
         //console.log("Obj:" + Nombre + " animacion:izq-der");                
         break; 
             
         case "arriba-abajo":
-        TweenMax.to(obj,tiempo,{opacity:0,y:100,ease:Back.easeIn,delay:retardo,onComplete:funcionSigue});
+        TweenMax.to(obj,tiempo,{opacity:0,y:100,ease:Back.easeIn,delay:retardo,onComplete:funcionSigue,onCompleteParams:parametros});
         //console.log("Obj:" + Nombre + " animacion:arriba-abajo");                
         break; 
             
         case "abajo-arriba":
-        TweenMax.to(obj,tiempo,{opacity:0,y:-100,ease:Back.easeIn,delay:retardo,onComplete:funcionSigue});
+        TweenMax.to(obj,tiempo,{opacity:0,y:-100,ease:Back.easeIn,delay:retardo,onComplete:funcionSigue,onCompleteParams:parametros});
         //console.log("Obj:" + Nombre + " animacion:abajo-arriba");                
         break;      
             
         case "gira":
-        TweenMax.to(obj,tiempo,{opacity:0,top:Nombre,rotation:360,delay:retardo,onComplete:funcionSigue});
+        TweenMax.to(obj,tiempo,{opacity:0,top:Nombre,rotation:360,delay:retardo,onComplete:funcionSigue,onCompleteParams:parametros});
         //console.log("Obj:" + Nombre + " animacion:abajo-arriba");  
             //TweenMax.to($("#engrane1"),3,{rotation:360});
         break;      

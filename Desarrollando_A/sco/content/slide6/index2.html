@@ -90,9 +90,9 @@ var tipo = [
 //animacionentrada(obj,tipo,tiempo,retardo,funcionSigue)
 //animacionsalida(obj,tipo,tiempo,retardo,funcionSigue)
 animacionentrada($("#ob1"),tipo[1],1,1);
-animacionsalida($("#ob1"),tipo[1],0.5,3,next1);
-    function next1(){
-        $("#ob1").html("a perro");
+animacionsalida($("#ob1"),tipo[1],0.5,3,next1,["a PERRON",1000]);
+    function next1(obj,num){
+        $("#ob1").html(obj + num);
         animacionentrada($("#ob1"),tipo[1],1,1);
     }
     
