@@ -80,17 +80,17 @@ function animacionentrada(obj,tipo,tiempo,retardo,funcionSigue){
         break; 
             
         case "arriba-abajo":
-        TweenMax.fromTo(obj,tiempo,{opacity:0,top:(parseInt(Obj_y) - parseInt(Obj_h))},{opacity:1,top:Obj_y,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue});
+        TweenMax.fromTo(obj,tiempo,{opacity:0,y:-100},{opacity:1,y:0,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue});
         //console.log("Obj:" + Nombre + " animacion:arriba-abajo");                
         break; 
             
         case "abajo-arriba":
-        TweenMax.fromTo(obj,tiempo,{opacity:0,top:(parseInt(Obj_y) + parseInt(Obj_h))},{opacity:1,top:Obj_y,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue});
+        TweenMax.fromTo(obj,tiempo,{opacity:0,y:100},{opacity:1,y:0,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue});
         //console.log("Obj:" + Nombre + " animacion:abajo-arriba");                
         break;             
         
         case "gira":
-        TweenMax.fromTo(obj,tiempo,{opacity:0,top:(parseInt(Nombre) - parseInt(Nombre))},{opacity:1,top:Nombre,rotation:360,delay:retardo,onComplete:funcionSigue});
+        TweenMax.fromTo(obj,tiempo,{opacity:0,rotation:0},{opacity:1,rotation:360,delay:retardo,onComplete:funcionSigue});
         //console.log("Obj:" + Nombre + " animacion:abajo-arriba");  
             //TweenMax.to($("#engrane1"),3,{rotation:360});
         break;   
@@ -159,17 +159,17 @@ function animacionsalida(obj,tipo,tiempo,retardo,funcionSigue){
         break; 
 
         case "der-izq":
-        TweenMax.to(obj,tiempo,{opacity:0,left:(parseInt(Obj_x) - parseInt(Obj_w)),ease:Back.easeIn,delay:retardo,onComplete:funcionSigue});
+        TweenMax.to(obj,tiempo,{opacity:0,x:-100,ease:Back.easeIn,delay:retardo,onComplete:funcionSigue});
         //console.log("Obj:" + Nombre + " animacion:izq-der");                
         break; 
             
         case "arriba-abajo":
-        TweenMax.to(obj,tiempo,{opacity:0,top:(parseInt(Obj_y) + parseInt(Obj_h)),ease:Back.easeIn,delay:retardo,onComplete:funcionSigue});
+        TweenMax.to(obj,tiempo,{opacity:0,y:100,ease:Back.easeIn,delay:retardo,onComplete:funcionSigue});
         //console.log("Obj:" + Nombre + " animacion:arriba-abajo");                
         break; 
             
         case "abajo-arriba":
-        TweenMax.to(obj,tiempo,{opacity:0,y:(parseInt(Obj_y) - parseInt(Obj_h)),ease:Back.easeIn,delay:retardo,onComplete:funcionSigue});
+        TweenMax.to(obj,tiempo,{opacity:0,y:-100,ease:Back.easeIn,delay:retardo,onComplete:funcionSigue});
         //console.log("Obj:" + Nombre + " animacion:abajo-arriba");                
         break;      
             
