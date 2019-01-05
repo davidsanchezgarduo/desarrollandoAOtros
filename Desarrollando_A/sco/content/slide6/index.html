@@ -37,15 +37,14 @@
 
 <body id="body">
     <div id="ob0" class="bgImg"> <img src="../../img/build01.svg"></div>
-<div id="mainPage" class="container h100">
+<div id="ContenedorPantalla" class="container h100">
 
     <section class="row vcenter">
             <div class="col-sm-6">
                     
                 <h1 id="ob1" class="text-white"> ¿Qué es y cómo aplicar el empoderamiento?</h1>
                
-                <p id="ob2" class="text text-white">Comprender la importancia de desarrollar habilidades para la
-mejora individual, a fin de aplicarlas en el desempeño personal y profesional.</p>
+                <p id="ob2" class="text text-white">Comprender la importancia de desarrollar habilidades para la mejora individual, a fin de aplicarlas en el desempeño personal y profesional.</p>
             </div>
             <div class="col-sm-6">
                 <div  id="ob3" class="imageSlide">
@@ -81,37 +80,35 @@ TweenMax.fromTo(
     );
   */  
 
-TweenMax.fromTo( 
-    $("#ob0").find("img") , 
-    1 , 
-    { alpha:0,top:100 }, 
-    { alpha:1,top:0, delay:1, onComplete:next1 } 
-    );  
-    
-TweenMax.fromTo( 
-    $("#ob1"), 
-    1 , 
-    { alpha:0,y:100 }, 
-    { alpha:1,y:0, delay:0} 
-    );  
-    
+    var tipo = [
+"alpha",//0
+"izq-der",//1
+"der-izq",//2
+"arriba-abajo",
+"abajo-arriba",
+"gira",
+"explota",
+"fold",
+"drop",
+"pulsate",
+"scale",
+"shake"
+]
+
+//animacionentrada(obj,tipo,tiempo,retardo,funcionSigue)
+//animacionsalida(obj,tipo,tiempo,retardo,funcionSigue)
+animacionentrada($("#ob1"),tipo[1],0,1);
+animacionsalida($("#ob1"),tipo[1],0.5,3,next1);
+    function next1(){
+        $("#ob1").html("a perro");
+        animacionentrada($("#ob1"),tipo[1],1,1);
+    }
 //TweenMax.to( 
 //    $("#ob1") , 
 //    1 , 
 //    { alpha:0,y:-100, delay:3 } 
 //    );    
     
-    
-    function next1(){
-        //cambiar texto ejemplo
-        //$("#ob0").html("<b>Hola</b>")
-        TweenMax.fromTo( 
-        $("#ob0").find("img") , 
-        1 , 
-        { alpha:1,left:0 }, 
-        { alpha:0.5,left:-50 } 
-        ); 
-    }
     
     
 </script>
