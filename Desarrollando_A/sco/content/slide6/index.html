@@ -32,24 +32,18 @@
 
 <body>
     <div id="ob0" class="bgImg"> <img src="../../img/build01.svg"></div>
-<div id="ContenedorPantalla" class="container h100">
-    
-<!--
-    <div class="titleSlide">
-        <h1>Este es el título</h1>
-    </div>
--->
-    
+<div id="" class="container h100">
+
     <section class="row vcenter">
             <div class="col-sm-6">
                     
                 <h1 id="ob1" class="text-white">¿Qué vas a aprender?</h1>
                
-                <p id="ob3" class="text text-white">Comprender la importancia de desarrollar habilidades para la
+                <p id="ob2" class="text text-white">Comprender la importancia de desarrollar habilidades para la
 mejora individual, a fin de aplicarlas en el desempeño personal y profesional.</p>
             </div>
             <div class="col-sm-6">
-                <div  id="ob4" class="imageSlide">
+                <div  id="ob3" class="imageSlide">
                    <p  class="text text-white"></p>
                 </div>
             </div>
@@ -67,32 +61,23 @@ mejora individual, a fin de aplicarlas en el desempeño personal y profesional.<
 
 
 <script>
-var an = [
-"alpha",
-"izq-der",
-"der-izq",
-"arriba-abajo",
-"abajo-arriba",
-"gira",
-"explota",
-"fold",
-"drop",
-"pulsate",
-"scale",
-"shake"
-]
-//    
-//    var obj1 = $(".bg1");
-//    var obj2 = $(".titulo1");
-//
-//animacionentrada(obj,tipo,tiempo,retardo,funcionSigue);    
-//animacionentrada(obj1,an[0],1,1)   
-//animacionentrada(obj2,an[1],2,1.5);
 
-for(var i = 1;i<=7;i++){
-  animacionentrada($("#ob" + i),an[3],1,i * 0.5);  
-}
-
+/*Ejemplo*/
+    
+/*
+//animacion en tweenmax
+TweenMax.fromTo( 
+    obj , 
+    tiempo , 
+    { alpha:0,x:-100,scale:0,y:-100 }, 
+    { alpha:1,x:0,scale:1,y:0, delay:1, onComplete:next1 } 
+    );
+  */  
+    function next1(){
+        //cambiar texto ejemplo
+        //$("#idDIV").html("texto nuevo")
+    }
+    
     
 </script>
 </html>
