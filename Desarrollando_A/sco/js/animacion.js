@@ -70,12 +70,12 @@ function animacionentrada(obj,tipo,tiempo,retardo,funcionSigue){
         break;
         
         case "izq-der":
-        TweenMax.fromTo(obj,tiempo,{opacity:0,left:(parseInt(Obj_x) - parseInt(Obj_w))},{opacity:1,left:Obj_x,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue});
+        TweenMax.fromTo(obj,tiempo,{opacity:0,x:-100},{opacity:1,x:0,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue});
         //console.log("Obj:" + Nombre + " animacion:izq-der");                
         break; 
 
         case "der-izq":
-        TweenMax.fromTo(obj,tiempo,{opacity:0,left:(parseInt(Obj_x) + parseInt(Obj_w)) },{opacity:1,left:Obj_x,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue});
+        TweenMax.fromTo(obj,tiempo,{opacity:0,x:100 },{opacity:1,x:0,ease:Back.easeOut,delay:retardo,onComplete:funcionSigue});
         //console.log("Obj:" + Nombre + " animacion:izq-der");                
         break; 
             
@@ -154,7 +154,7 @@ function animacionsalida(obj,tipo,tiempo,retardo,funcionSigue){
         break;
         
         case "izq-der":
-        TweenMax.to(obj,tiempo,{opacity:0,left:(parseInt(Obj_x) + parseInt(Obj_w)),ease:Back.easeIn,delay:retardo,onComplete:funcionSigue});
+        TweenMax.to(obj,tiempo,{opacity:0,x:100,ease:Back.easeIn,delay:retardo,onComplete:funcionSigue});
         //console.log("Obj:" + Nombre + " animacion:izq-der");                
         break; 
 

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>base 1</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+<style>
+    
+    body{
+        background-color: #f0a10e;
+    }
+    
+.bgImg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.bgImg img{
+    position: relative;
+    opacity: 0.9;
+    transition: transform 20s;
+    height: 140%;
+    float: right;
+}
+    
+    #audio1{
+        position: absolute;
+        z-index: 111;
+    }
+    
+    </style>
+
+<body id="body">
+    <div id="ob0" class="bgImg"> <img src="../../img/build01.svg"></div>
+<div id="ContenedorPantalla" class="container h100">
+
+    <section class="row vcenter">
+            <div class="col-sm-6">
+                    
+                <h1 id="ob1" class="text-white"> ¿Qué es y cómo aplicar el empoderamiento?</h1>
+               
+                <p id="ob2" class="text text-white">Comprender la importancia de desarrollar habilidades para la
+mejora individual, a fin de aplicarlas en el desempeño personal y profesional.</p>
+            </div>
+            <div class="col-sm-6">
+                <div  id="ob3" class="imageSlide">
+                   <p  class="text text-white"></p>
+                </div>
+            </div>
+    </section>
+    
+
+
+</div>    
+   <audio id="audio1" src="../audios/slide6.mp3" controls></audio> 
+</body>
+<script src="../../js/jquery-3.1.0.min.js"></script>
+<script src="../../js/jquery.gsap.min.js"></script>    
+<script src="../../js/TweenMax.min.js"></script>
+<script src="../../js/animacion.js"></script>
+
+
+<script>
+    
+            audio1.play();    
+
+var tipo = [
+"alpha",//0
+"izq-der",//1
+"der-izq",//2
+"arriba-abajo",
+"abajo-arriba",
+"gira",
+"explota",
+"fold",
+"drop",
+"pulsate",
+"scale",
+"shake"
+]
+
+//animacionentrada(obj,tipo,tiempo,retardo,funcionSigue)
+//animacionsalida(obj,tipo,tiempo,retardo,funcionSigue)
+animacionentrada($("#ob1"),tipo[1],1,1);
+animacionsalida($("#ob1"),tipo[1],0.5,3,next1);
+    function next1(){
+        $("#ob1").html("a perro");
+        animacionentrada($("#ob1"),tipo[1],1,1);
+    }
+    
+</script>
+</html>
