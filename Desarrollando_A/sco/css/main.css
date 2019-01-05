@@ -1,0 +1,200 @@
+@font-face {
+    font-family: "Century";
+    src: url("../fonts/GOTHIC.TTF") format("opentype");
+    }
+
+html{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: #FFF;
+    font-family: 'Century';
+}
+
+.bg-orange{
+    background-color: #f0a10e;
+}
+
+.bg-blue{
+    background-color: #4059A7;
+}
+
+#advanceBarContainer{
+    z-index: 100;
+    position: absolute;
+    height: 2%;
+    width: 100%;
+}
+
+#barAdvance{
+    position: relative;
+    height: 100%;
+    width: 10%;
+    transition: width 2s;
+}
+
+
+
+.logo{
+    position: relative;
+    width: 10%;
+    max-width: 150px;
+    text-align: center;
+    margin-bottom: 2vw;
+    z-index: 200;
+    top: 2%;
+}
+
+.logo img{
+    width: 80%;
+}
+
+
+.spacio-logo{
+    width: 100%;
+    height: 20%;
+}
+
+#menuBar{
+    position: absolute;
+    width: 100%;
+    height: 13%;
+    top: 0%;
+}
+
+.menuContainer{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    opacity: 1;
+    background-color: rgba(250,250,250,1);
+}
+
+.botones{
+    cursor: pointer;
+    margin:1% 1%;
+    float: left;
+    padding:0.5% 3%;
+}
+
+.botones img{
+    height: 60%;
+}
+
+.logoufa{
+    position: relative;
+    height: 100%;
+    float: right;
+    z-index: 123;
+}
+
+.logoufa img{
+    height: 80%;
+}
+
+
+
+
+#navButtons{
+    position: absolute;
+    display: flex;
+    justify-content:space-around;
+    left: 50%;
+    transform: translate(-50%,0%);
+    bottom: 0%;
+    height: 8%;
+    margin: 2vw;
+}
+
+#subNavButtons{
+    position: absolute;
+    right: 0%;
+    transform: translate(0%,-50%);
+    bottom: 0%;
+    width: 5%;
+    top: 50%;
+    display: table;
+    align-items: center;
+    }
+
+.SubButtonModule{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 1.5vw;
+    color:#FFF;
+    cursor:pointer;
+}
+
+.SubButtonModule p{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonModule{
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: #f0a10e;
+    border-radius: 50%;
+    margin:3vw 1vw;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.buttonModule p{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loadMovies{
+    border: 0;
+    position: absolute;
+    top: 0%;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+#cortinilla{
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: #f0a10e;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    display: none;
+}
+
+#cortinilla h1{
+    position: relative;
+    opacity: 0;
+    text-align: center;
+    top: 50%;
+}
+
+@media (orientation : portrait) { 
+
+
+}

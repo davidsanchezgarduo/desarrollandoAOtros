@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UFA - Inspirar y desarrollar a otros</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/general.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/modal.css">
+<link rel="stylesheet" href="css/videopopup.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+
+
+</head>
+
+<body>
+    
+  <div id="nav">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-3 text-right">
+              <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                  <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default bthome" id="btnHome" data-slide="1" title="Home"></button>
+                  </div>
+                  <div class="btn-group" role="group">
+                      <a href="#indice" name="modal">
+                        <button type="button" class="btn btn-default btindi" title="contenido"></button>
+                      </a>
+                  </div>
+                  <div class="btn-group" role="group">
+                    <a href="#dialog_2" name="modal">
+                      <button type="button" onClick="rep222()" class="btn btn-default btayu" title="Navegador"></button>
+                    </a>
+                  </div>
+                </div>
+          </div>
+          <div class="col-md-7 text-center">
+              <div class="pt-5">
+                <!--<audio id="au1" preload="auto" autoplay loop controls>
+                  <source src="audios/fondo.mp3">
+                </audio>-->
+              </div>
+          </div>
+          <div class="col-md-2 text-right logo">
+            <img src="img/logo_UFA.png" width="150">
+          </div>
+      </div>
+    </div>
+    
+
+  </div>
+
+<div class="page-slider">
+  <!--<div class="prev-btn"><span class="fa fa-angle-up"></span></div>
+  <div class="next-btn"><span class="fa fa-angle-down"></span></div>-->
+  <div class="nav-dots">
+    <div data-slide="1" class="nav-dot"> </div>
+    <div data-slide="2" class="nav-dot"> </div>
+    <div data-slide="3" class="nav-dot"> </div>
+    <div data-slide="4" class="nav-dot"> </div>
+    <div data-slide="5" class="nav-dot"> </div>
+    <div data-slide="6" class="nav-dot"> </div>
+    <div data-slide="7" class="nav-dot"> </div>
+  </div>
+<!-- Página 1-->
+  <div data-slide="1" class="panel">
+    <div id="layer-1" class="trans-layer"></div>
+    <section id="section-1" class="section">
+      <div class="section-content">
+          <div id="ContenedorPantalla">
+            <h1>Section 1</h1>
+          </div>
+      </div>
+    </section>
+  </div>
+
+  <div data-slide="2" class="panel">
+    <div id="layer-2" class="trans-layer"></div>
+    <section id="section-2" class="section">
+      <div class="section-content">
+          <h1>Section 2</h1>
+      </div>
+    </section>
+  </div>
+  <div data-slide="3" class="panel">
+    <div id="layer-3" class="trans-layer"></div>
+    <section id="section-3" class="section">
+      <div class="section-content">
+          <h1>Section 3</h1>
+      </div>
+    </section>
+  </div>
+  <div data-slide="4" class="panel">
+    <div id="layer-4" class="trans-layer"></div>
+    <section id="section-4" class="section">
+      <div class="section-content">
+          <h1>Section 4</h1>
+      </div>
+    </section>
+  </div>
+  <div data-slide="5" class="panel">
+    <div id="layer-5" class="trans-layer"></div>
+    <section id="section-5" class="section">
+      <div class="section-content">
+        <h1>Section 5</h1>
+      </div>
+    </section>
+  </div>
+  <div data-slide="6" class="panel">
+    <div id="layer-6" class="trans-layer"></div>
+    <section id="section-6" class="section">
+      <div class="section-content">
+        <h1>Section 6</h1>
+      </div>
+    </section>
+  </div>
+  <div data-slide="7" class="panel">
+    <div id="layer-7" class="trans-layer"></div>
+    <section id="section-7" class="section">
+      <div class="section-content">
+        <h1>Section 7</h1>
+      </div>
+    </section>
+  </div>
+
+
+<!-- ventana modal índice -->
+    <div id="boxes">
+      <div id="mask"></div>
+      <!-- modal Indice -->
+      <div id="indice" class="window">
+        <a href="#" class="close">&times;</a>
+        <div class="container indice">
+          <h2>Índice de contenidos</h2>
+          <ul>
+            <li class="nvindice hand" data-slide="1">1 - Bienvenida</li>
+            <li class="nvindice hand" data-slide="2">2 - Presentacion</li>
+            <li class="nvindice hand" data-slide="3">3 - Embajador del desarrollo</li>
+            <li class="nvindice hand" data-slide="4">4 - Desarrollando líderes efectivos</li>
+            <li class="nvindice hand" data-slide="5">5 - Coaching y retroalimentación</li>
+            <li class="nvindice hand" data-slide="6">6 - Gestión por pregunta</li>
+            <li class="nvindice hand" data-slide="7">7 - Cierre</li>
+          </ul>
+        </div>
+      </div>
+      <div id="dialog_2" class="window dialogo">
+        <!-- empieza contenido -->
+        <div class="container_modal">
+           <img src="img/recorrido.jpg" alt="">
+        </div>
+        <!-- fin contenido -->
+        <a href="#" class="close" onClick="rep222Pause();">&times;</a>
+      </div>
+    </div>
+
+      
+
+
+
+</div>
+
+<!-- reproductores-->
+
+
+<!--  scripts JS -->
+
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/slides.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/animated.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+<script type="text/javascript" src="js/videopopup.js"></script>
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
+
+
+
+<script src="api_scorm.js"></script>
+</body>
+</html>

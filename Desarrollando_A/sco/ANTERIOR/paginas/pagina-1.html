@@ -1,0 +1,123 @@
+<!-- estilos de la pagina -->
+<style>
+        #pantalla1 {
+            width: 100%;
+            height: 100%;
+            background: #FFF;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .contenidos1, .contenidos2 {
+            color: rgb(56, 56, 56);
+            font-size: 2rem;
+            text-align: center;
+            padding: 4em 1em;
+        }
+        .contenidos2 {
+            padding: 13em 1em 5em 1em;
+            width: 60%;
+            margin:0 auto;
+        }
+        #logo {
+            width: 800px;
+            margin: 0 auto;
+        }
+        #logo img {
+            width: 100%;
+        }
+        .mano {
+            top:40%;
+        }
+       </style>
+        
+        
+        
+    <!-- Elementos de la pagina -->
+        <div id="pantalla1">
+            <div class="contenidos1">
+                <div class="container">
+                    <div id="logo">
+                        <img src="img/logo_UFA.png">
+                    </div>
+                    <div id="txt1">PRESENTA</div>
+                    <div class="mt_1">
+                        <div id="txt2">Eje Desarrollo | Desarrollando a otros</div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenidos2">
+                <div>
+                    <i>"La innovación es lo que distingue al líder de los seguidores”</i>
+                    <p>&nbsp;</p>
+                    <p>- Steve Jobs.</p>                    
+                </div>
+                <h1 class="titulo2">¡Bienvenido!</h1>
+                <div class="txt3">Estás a un clic de vivir una experiencia de aprendizaje diferente.</div>
+                <div id="ins" class="mano">
+                    <img src="img/tap.svg">
+                </div>
+            </div>
+        </div>
+
+
+        
+        
+         
+<audio class="voz" id="audio11" src="paginas/audios/inspirar_1.mp3" preload="Cargando audio"></audio>
+<audio class="voz" id="audio12" src="paginas/audios/inspirar_2.mp3" preload="Cargando audio"></audio>
+<!-- Funciones de la pagina -->
+
+<script>
+    $("#txt1, #txt2, #logo, #ins, .nav-dots, .contenidos1, .titulo2, .txt3, .contenidos2").hide();
+    $(document).ready(function() {
+
+            $(".contenidos1").show(rep11);
+            $(".contenidos1").animateCss('FadeIn slower');
+            $("#logo").show();
+            $("#logo").animateCss('zoomIn slower', txt1)
+            $("#txt2").animateCss('FadeIn slower');
+            $(".titulo2").animateCss('zoomIn slow');
+        
+        function txt1(){
+            $("#txt1").show();
+            $("#txt1").animateCss('fadeIn slower', txt2);
+        }
+        function txt2(){
+            $("#txt2").show();
+            $("#txt2").animateCss('fadeIn slower', outcontenidos1);
+        }
+        function outcontenidos1(){
+            $(".contenidos1").hide();
+            $(".contenidos1").animateCss('fadeOut slower', section2);
+        }
+        function section2(){
+            $(".contenidos2").show(rep12);
+            $(".contenidos2").animateCss('fadeIn', titulo2);
+        }
+        function titulo2(){
+            $(".titulo2").show();
+            $(".titulo2").animateCss('fadeIn slower', vertxt3);
+        }
+        function vertxt3(){
+            $(".txt3").show();
+            $(".txt3").animateCss('fadeIn slower', ins);
+        }
+
+
+        function ins(){
+            $(".contenidos2 #ins").show();
+            $(".contenidos2 #ins").animateCss('bounceInUp', botones);
+        }
+        function botones(){ 
+            $(".nav-dots").fadeIn();
+        };
+
+
+        function rep11(){
+            audio11.play() 
+        }
+        function rep12(){
+            audio12.play() 
+        }
+    
+    }); 
+</script>

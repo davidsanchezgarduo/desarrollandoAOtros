@@ -1,0 +1,145 @@
+<!-- estilos de la pagina -->
+<style>
+        #pantalla2 {
+            width: 100%;
+            height: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f0a10e;
+            
+        }
+        #pantalla2 .contenidos {
+            color: #333;
+            font-size: 2rem;
+        }
+        #pantalla2 .fondo {
+            position: absolute;
+            right: 1px;
+            z-index: 1;
+            -webkit-transform: rotate(-200deg);
+            -moz-transform: rotate(-200deg);
+            -ms-transform: rotate(-200deg);
+            transform: rotate(-200deg);
+            width: 50%;
+            height: 100%;
+            background: url("paginas/img/bg2.png");
+            -moz-background-size: cover;
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        #pantalla2 .fg {
+            animation-duration: 5s;
+            animation-delay: 2s;
+        }
+        #pantalla2 .container2 {
+            text-align: left;
+            padding:5em 2em 2em 6em;
+            position: relative;
+            z-index: 3;
+        }
+        #pantalla2 .contenidos ul li {
+              margin-bottom: 7px;
+          }
+        #pantalla2 .contenidos .mano {
+        top:45%;
+        }
+       
+      </style>
+        
+        
+        
+        <!-- Elementos de la pagina -->
+        <div id="pantalla2">
+            <div class="fondo fg"></div>
+            <div class="contenidos">
+                <div class="container2">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="titulo"><h1>¿Qué vas a aprender?</h1></div>
+                            <div class="mt_1">
+                                <div class="row">
+                                    <div class="col-md-3 text-right">
+                                        <p>&nbsp;</p>
+                                        <div class="txt1"><img src="paginas/img/objective.svg" alt="" width="90"></div>
+                                        <p>&nbsp;</p>
+                                        <p>&nbsp;</p>
+                                        <div class="txt3"><img src="paginas/img/destination.svg" alt="" width="90"></div>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <h2 class="txt1">Objetivo</h2>
+                                        <div class="txt2">Distinguir acciones concretas para impulsar las habilidades y
+capacidades de los colaboradores dentro de espacios formales.</div>
+                                        <p>&nbsp;</p>
+                                        <h2 class="txt3">Ruta de aprendizaje</h2>
+                                        <div class="caja">
+                                            <div class="txt4">
+                                                <ul>
+                                                <li>Empoderamiento y desarrollo</li>
+                                                <li>Aprendizaje basado en retos</li>
+                                                <li>Aprendizaje basado en preguntas</li>
+                                                <li>Liderazgo situacional</li>
+                                                <li>Coaching para el desarrollo</li>
+                                                </ul>                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+                <div id="ins" class="mano">
+                    <img src="img/tap_bco.svg" width="80">
+                </div>
+                
+            </div>
+        </div>
+        
+        
+         
+<audio class="voz" id="audio21" src="paginas/audios/inspirar_3.mp3" preload="Cargando audio"></audio>
+
+<!-- Funciones de la pagina -->
+<script>
+    $(".titulo, .txt1, .txt2, .txt3, .txt4, .nav-dots, #ins").hide();
+    $(document).ready(function(){
+        $("#pantalla2 .fg").animateCss('fadeIn slower');
+
+        $("#pantalla2 .titulo").show(rep21);
+        $("#pantalla2 .titulo").animateCss('fadeIn slower', txt21);
+        
+        function txt21(){
+            $(".txt1").show();
+            $("#pantalla2 .txt1").animateCss('fadeIn slow', txt22);
+        }
+        function txt22(){
+            $("#pantalla2 .txt2").show();
+            $("#pantalla2 .txt2").animateCss('fadeIn slower', txt23);
+        }
+        function txt23(){
+            $("#pantalla2 .txt3").show();
+            $("#pantalla2 .txt3").animateCss('fadeIn slower', txt24);
+        }
+        function txt24(){
+            $("#pantalla2 .txt4").show();
+            $("#pantalla2 .txt4").animateCss('fadeIn slower', ins);
+        }
+        function ins(){
+            $("#pantalla2 #ins").show();
+            $("#pantalla2 #ins").animateCss('bounceInUp', botones2);
+        }
+        function botones2(){ 
+            $(".nav-dots").show();
+            $(".nav-dots").fadeIn();
+        };
+
+        function rep21(){
+            audio21.play();
+        }
+        
+    
+    }); 
+</script>
