@@ -28,16 +28,21 @@
     float: right;
 }
     
+    #audio1{
+        position: absolute;
+        z-index: 111;
+    }
+    
     </style>
 
-<body>
+<body id="body">
     <div id="ob0" class="bgImg"> <img src="../../img/build01.svg"></div>
-<div id="" class="container h100">
+<div id="mainPage" class="container h100">
 
     <section class="row vcenter">
             <div class="col-sm-6">
                     
-                <h1 id="ob1" class="text-white">¿Qué vas a aprender?</h1>
+                <h1 id="ob1" class="text-white"> ¿Qué es y cómo aplicar el empoderamiento?</h1>
                
                 <p id="ob2" class="text text-white">Comprender la importancia de desarrollar habilidades para la
 mejora individual, a fin de aplicarlas en el desempeño personal y profesional.</p>
@@ -52,7 +57,7 @@ mejora individual, a fin de aplicarlas en el desempeño personal y profesional.<
 
 
 </div>    
-    
+   <audio id="audio1" src="../audios/slide6.mp3" controls></audio> 
 </body>
 <script src="../../js/jquery-3.1.0.min.js"></script>
 <script src="../../js/jquery.gsap.min.js"></script>    
@@ -61,6 +66,8 @@ mejora individual, a fin de aplicarlas en el desempeño personal y profesional.<
 
 
 <script>
+    
+            audio1.play();    
 
 /*Ejemplo*/
     
@@ -73,9 +80,37 @@ TweenMax.fromTo(
     { alpha:1,x:0,scale:1,y:0, delay:1, onComplete:next1 } 
     );
   */  
+
+TweenMax.fromTo( 
+    $("#ob0").find("img") , 
+    1 , 
+    { alpha:0,top:100 }, 
+    { alpha:1,top:0, delay:1, onComplete:next1 } 
+    );  
+    
+TweenMax.fromTo( 
+    $("#ob1"), 
+    1 , 
+    { alpha:0,y:100 }, 
+    { alpha:1,y:0, delay:0} 
+    );  
+    
+//TweenMax.to( 
+//    $("#ob1") , 
+//    1 , 
+//    { alpha:0,y:-100, delay:3 } 
+//    );    
+    
+    
     function next1(){
         //cambiar texto ejemplo
-        //$("#idDIV").html("texto nuevo")
+        //$("#ob0").html("<b>Hola</b>")
+        TweenMax.fromTo( 
+        $("#ob0").find("img") , 
+        1 , 
+        { alpha:1,left:0 }, 
+        { alpha:0.5,left:-50 } 
+        ); 
     }
     
     
