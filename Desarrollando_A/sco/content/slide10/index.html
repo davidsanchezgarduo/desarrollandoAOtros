@@ -50,20 +50,20 @@ button{
 
     <section class="row vcenter">
             <div class="col-sm-6">
-            <h1 id="ob1" class="text-white">PREGUNTA 1</h1>
-            <div id="ob2" class="text text-white">
-                Es una práctica en donde se afirma que las personas poseen la capacidad de analizar, proponer, actuar y decidir…
-                <br><br>
-                <div class="row">
-                	<div class="col-sm-6">
-                		<button id="pregunta1" onclick="responder(1);">Empoderar</button>
-                	</div>
+	            <h1 id="ob1" class="text-white">PREGUNTA 1</h1>
+	            <div id="ob2" class="text text-white">
+	                <p id="txt1"></p>
+	                <br><br>
+	                <div class="row">
+	                	<div class="col-sm-6" id="pregunta1">
+	                		<button onclick="responder(1);"></button>
+	                	</div>
 
-                	<div class="col-sm-6">
-                		<button id="pregunta2" onclick="responder(0);">Enaltecer</button>
-                	</div>
-                </div>
-            </div>
+	                	<div class="col-sm-6" id="pregunta2">
+	                		<button onclick="responder(0);"></button>
+	                	</div>
+	                </div>
+	            </div>
             </div>
             <div class="col-sm-6">
                 <div  id="ob3" class="imageSlide">
@@ -82,7 +82,7 @@ button{
 
 
 <script>
-    var contador = 1;
+    var contador = 0;
             //audio1.play();    
 
 var tipo = [
@@ -109,20 +109,33 @@ TweenMax.fromTo(
 animacionentrada($("#ob1"),tipo[4],1,0);
 animacionentrada($("#ob2"),tipo[4],1,2.5);
 var textos = [  
-                {pregunta:"Es una cualidad que distingue a un líder que propicia el desarrollo:",respuesta1:"Innovador y transformacional",respuesta2:"Instruccional y fiscalizador"},
-                {pregunta:"Es una de las acciones más importantes para propiciar aprendizaje, empoderamiento y desarrollo…",respuesta1:"Retroalimentar",respuesta2:"Dirigir"}
+				{pregunta:'Es una práctica en donde se afirma que las personas poseen la capacidad de analizar, proponer, actuar y decidir…',respuesta1:'Empoderar',respuesta2:'Enaltecer', correcta:0},
+                {pregunta:"Es una cualidad que distingue a un líder que propicia el desarrollo:",respuesta1:"Innovador y transformacional",respuesta2:"Instruccional y fiscalizador",correcta:0},
+                {pregunta:"Es una de las acciones más importantes para propiciar aprendizaje, empoderamiento y desarrollo…",respuesta1:"Retroalimentar",respuesta2:"Dirigir",correcta:0}
                 ];
-function responder(correcta){
-	contador++;
-	if (correcta == 1) {
-		alert('correcto');
-	}else{
-		alert('incorrecto');
-	}
-	$('#ob1').html('PREGUNTA '+contador);
-	$('#ob2').html(textos[contador-1].pregunta);
-	$('#pregunta1').html(textos[contador-1].respuesta1);
-	$('#pregunta2').html(textos[contador-1].respuesta2);
+function responder(posicion, correcta){
+		if (posicion == correcta) {
+			alert('correcto');
+		}else{
+			alert('incorrecto');
+		}
+		next_question();
+	
 }
+function next_question(){
+	if (contador == (textos.length)) {
+		alert('FIN');
+	}else{
+		$('#txt1').html(textos[contador].pregunta);
+		var pregunta1 = '<button onclick="responder(0, '+textos[contador].correcta+' );"> '+textos[contador].respuesta1+'</button>';
+		var pregunta2 = '<button onclick="responder(1, '+textos[contador].correcta+' );"> '+textos[contador].respuesta2+'</button>';
+		$('#pregunta1').html(pregunta1);
+		$('#pregunta2').html(pregunta2);
+		contador++;
+		$('#ob1').html('PREGUNTA '+contador);
+	}
+}
+console.log(textos[contador].pregunta);
+next_question();
 </script>
 </html>
