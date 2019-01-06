@@ -60,6 +60,7 @@
 
 </div>    
    <audio id="audio1" src="../audios/slide7.mp3" controls=""></audio> 
+   <audio id="audio2" src="../audios/slide7.mp3"></audio> 
 </body>
 <script src="../../js/jquery-3.1.0.min.js"></script>
 <script src="../../js/jquery.gsap.min.js"></script>    
@@ -100,6 +101,10 @@ var textos = [
                 ];
 
 for (var i = 0; i < textos.length; i++) {
+    if (i == (textos.length-1)) {
+        alert('sam walton');
+        audio2.play(); 
+    }
     animacionsalida($("#ob2"),tipo[4],1,textos[i].tiempo,next1,[textos[i].cadena,textos[i].icono]);
 }
    function next1(obj,icono){
