@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>base 2</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+    .popUps{
+        position: fixed;
+    }
+    .popUps div{
+        border: solid 1px white;
+        border-radius: 10px;
+    }
+</style>
+</head>
+
+<body>
+<div id="ContenedorPantalla">
+    <div class="popUps">Da clic en los recuadros para saber más.</div>
+    <div class="bg8"></div>
+    <div class="titulo2">
+        <h1>
+            ¿Cómo es un líder que  <br>
+            <span class="bg2white">propicia el desarrollo?</span>
+        </h1>
+    </div>
+</div>    
+    
+</body>
+<script src="../../js/jquery-3.1.0.min.js"></script>
+<script src="../../js/jquery.gsap.min.js"></script>    
+<script src="../../js/TweenMax.min.js"></script>
+<script src="../../js/animacion.js"></script>
+
+<script>
+var an = [
+"alpha",
+"izq-der",
+"der-izq",
+"arriba-abajo",
+"abajo-arriba",
+"gira",
+"explota",
+"fold",
+"drop",
+"pulsate",
+"scale",
+"shake"
+]
+    
+    var obj1 = $(".bg8");
+    var obj2 = $(".titulo2");
+    var obj3 = $(".bg2white");
+//animacionentrada(obj,tipo,tiempo,retardo,funcionSigue);    
+animacionentrada(obj1,an[0],1,1)   
+animacionentrada(obj2,an[2],2,1.5,enterSecond)
+
+function enterSecond(){
+	animacionentrada(obj3,an[2],2,0)
+}
+
+    
+</script>
+</html>

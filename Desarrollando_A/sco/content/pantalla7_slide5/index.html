@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>base 4</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<style type="text/css">
+    .titulo{
+        position: relative;
+        color: black;
+        font-size: 1em;
+        padding-right: 10%;
+        padding-left: 10%;
+        padding-top:5%;
+    }
+
+    .finalText{
+        position: relative;
+        color:black;
+        font-size: 1em;
+        padding-right: 10%;
+        padding-left: 10%;
+        padding-top:5%;
+    }
+
+    .table{
+        position: relative;
+        //top:25%;
+        left: 50%;
+padding-top:5%;
+        transform: translate(-25%,0%);
+
+    }
+    td{
+        padding: 0 10px 0 10px
+    }
+    h1{
+        font-size: 1.2em;
+    }
+</style>
+<body>
+<div id="ContenedorPantalla" class="containerWhite">
+    <div class="bg4"></div>
+    <div class="titulo">
+        <h1>
+            FANDELI considera 3 aspectos para mejorar, aprender y desarrollar
+a partir de la evaluación: Fortalezas, áreas de oportunidad y áreas
+de mejora.
+        </h1>
+    </div>
+    <div class="table">
+        <table>
+        <tr>
+            <td><h1>Fortalezas</h1></td>
+            <td><h1>¿Se logró el resultado?<br>
+            ¿Qué se hizo bien?<br>
+            ¿Qué se hizo con impecabilidad?</h1>
+            </td>
+        </tr>  
+         <tr>
+            <td><h1>Áreas de oportunidad</h1></td>
+            <td><h1>¿Qué no se realizó?<br>
+¿Qué se hizo mal?<br>
+¿En qué no se logró la impecabilidad?</h1>
+            </td>
+        </tr> 
+        <tr>
+            <td><h1>Áreas de mejora</h1></td>
+            <td><h1>¿Qué no se realizó?<br>
+¿Qué se hizo mal?<br>
+¿En qué no se logró la impecabilidad?</h1>
+            </td>
+        </tr>     
+
+        </table>
+    </div>
+    <div class="finalText">
+        <h1>
+            La clave de hacer preguntas; no es decirle a la persona qué hacer
+sino ayudar a que encuentre sus propias respuestas haciendo la
+pregunta correcta en el momento adecuado.
+        </h1>
+    </div>
+
+</div>    
+    
+</body>
+<script src="../../js/jquery-3.1.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<!--<script src="../js/animacion.js"></script>-->
+
+<script>
+var an = [
+"alpha",
+"izq-der",
+"der-izq",
+"arriba-abajo",
+"abajo-arriba",
+"gira",
+"explota",
+"fold",
+"drop",
+"pulsate",
+"scale",
+"shake"
+]
+    
+    var obj1 = $(".bg4");
+    var obj2 = $(".titulo");
+    var ob3 = $(".table");
+    var ob4 = $(".finalText");
+    //var obj3 = $(".combination4");
+//animacionentrada(obj,tipo,tiempo,retardo,funcionSigue); 
+
+    TweenMax.fromTo(obj1,1,{alpha:0},{alpha:0.5,delay:0.5}); 
+    TweenMax.fromTo(obj2,2,{alpha:0,x:-100},{alpha:1,x:0,delay:0.5}); 
+    TweenMax.fromTo(obj3,2,{alpha:0,x:100},{alpha:1,x:0,delay:10});  
+    TweenMax.fromTo(obj4,2,{alpha:0,x:-100},{alpha:1,x:0,delay:36});
+
+var audio1 = new Audio();
+    audio1.src = "../audios/p7_s5.mp3"
+    audio1.addEventListener('load', function () {
+        audio1.play();
+    });
+        audio1.play();
+    
+    $(this).click(function(){
+        audio1.play();
+    })
+    
+</script>
+</html>

@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>base 1</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+
+<style type="text/css">
+    .card{
+        border-radius: 20px;
+        border: 2px solid black;
+
+    }
+
+    .pop{
+        opacity: 0;
+        transform: scale(0);
+        height: 60%;
+        width: 80%;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        display: none;
+        background-color: white;
+        line-height: 20;
+    }
+
+    #popText{
+        display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+    }
+
+    #ob1{
+        text-align: center;
+       
+    }
+
+    .vcenter{
+        padding-top: 5%;
+    }
+    .arrow{
+        width: 100%;
+    }
+
+</style>
+
+<body>
+    <div id="ob0" class="bg1"></div>
+<div id="ContenedorPantalla" class="container">
+    
+<!--
+    <div class="titleSlide">
+        <h1>Este es el título</h1>
+    </div>
+-->
+    
+    <section class="row vcenter">
+            <div class="col-sm-12" id="title" >
+                    
+                <h1 id="ob1" class="text-black">¡Diseña tu reto!</h1>
+                
+            </div>
+            
+    </section>
+    
+    
+    <section class="row vcenter">
+        
+            <div id="ob5" class="col-sm-2 card" onclick="click(1)">
+                <h2 class="text-black">Diseño del reto</h2>
+                
+            </div>
+            <div  class="col-sm-2" id="arrow1">
+                <img class="arrow"src ="../img/arrow.png">
+            </div>
+        
+            <div id="ob6" class="col-sm-2 card" onclick="click(2)">
+                <h2 class="text-black">Arranque del reto</h2>
+                <br>
+                <h2 class="text-black">Punto A</h2>
+                
+            </div>
+            <div  class="col-sm-2" id="arrow2">
+                <img class="arrow"src ="../img/arrow.png">
+            </div>
+        
+            <div id="ob7" class="col-sm-2 card" onclick="click(3)">
+                <h2 class="text-black">Avances y resultados parciales</h2>
+                
+            </div>
+
+            <div  class="col-sm-2" id="arrow3">
+                <img class="arrow"src ="../img/arrow.png">
+            </div>
+
+            <div id="ob8" class="col-sm-2 card" onclick="click(4)">
+                <h2 class="text-black">Meta y resultado final <br><br> Punto B</h2>
+                
+            </div>
+    
+    </section>
+    <section class="row vcenter">
+        <div class="col-sm-12" id="final">
+                    
+            <h1 class="text-black">¡Recuerda que un reto es un desafío para la mente, que inspira y genera
+movimiento!</h1>
+                
+            </div>
+    </section>
+
+    <div class ="pop card">
+        <h1 id="popText"></h1>
+    </div>
+</div>    
+    
+</body>
+<script src="../../js/jquery-3.1.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<!--<script src="../js/animacion.js"></script>-->
+
+
+<script>
+var an = [
+"alpha",
+"izq-der",
+"der-izq",
+"arriba-abajo",
+"abajo-arriba",
+"gira",
+"explota",
+"fold",
+"drop",
+"pulsate",
+"scale",
+"shake"
+]
+//    
+//    var obj1 = $(".bg1");
+//    var obj2 = $(".titulo1");
+//
+//animacionentrada(obj,tipo,tiempo,retardo,funcionSigue);    
+//animacionentrada(obj1,an[0],1,1)   
+//animacionentrada(obj2,an[1],2,1.5);
+
+var popText = document.getElementById("popText");
+var popObj = $(".pop");
+var inPop = false;
+
+ var obj1 = $(".bg1");
+    var obj2 = $("#title");
+    var obj3 = $("#final");
+    var rect1 = $("#ob5");
+    var rect2 = $("#ob6");
+    var rect3 = $("#ob7");
+    var rect4 = $("#ob8");
+    var arrow1 =  $("#arrow1");
+    var arrow2 =  $("#arrow2");
+    var arrow3 =  $("#arrow3");
+
+    TweenMax.fromTo(obj1,1,{alpha:0},{alpha:0.5,delay:0.5}); 
+    TweenMax.fromTo(obj2,2,{alpha:0,x:-100},{alpha:1,x:0,delay:0.5}); 
+    TweenMax.fromTo(obj3,2,{alpha:0,x:100},{alpha:1,x:0,delay:2}); 
+    TweenMax.fromTo(rect1,2,{alpha:0,y:-100},{alpha:1,y:0,delay:13}); 
+    TweenMax.fromTo(arrow1,2,{alpha:0},{alpha:1,delay:20});
+    TweenMax.fromTo(rect2,2,{alpha:0,y:-100},{alpha:1,y:0,delay:21}); 
+    TweenMax.fromTo(arrow2,2,{alpha:0},{alpha:1,delay:30});
+    TweenMax.fromTo(rect3,2,{alpha:0,y:-100},{alpha:1,y:0,delay:31}); 
+    TweenMax.fromTo(arrow3,2,{alpha:0},{alpha:1,delay:38});
+    TweenMax.fromTo(rect4,2,{alpha:0,y:-100},{alpha:1,y:0,delay:39}); 
+
+$(window).click(function(e) {
+    
+    if(inPop){
+        TweenMax.fromTo(popObj,1,{alpha:1,scale:1},{alpha:0,scale:0,onComplete:function(){
+            inPop=false
+            popObj.css("display","block");
+        }}); 
+    }
+});
+
+rect1.click(function(e){
+    click(1);
+})
+
+rect2.click(function(e){
+    click(2);
+})
+
+rect3.click(function(e){
+    click(3);
+})
+
+rect4.click(function(e){
+    click(4);
+})
+
+function click(id){
+    
+    if(!inPop){
+        switch(id){
+            case 1:
+            popText.innerHTML ="Diseño del reto.<br><br> Presenta la actividad a los participantes y propicia el entusiasmo.";
+            break;
+            case 2:
+            popText.innerHTML ="Arranque del Reto, punto A.<br><br> Declara tus expectativas e indica el punto A (inicio) y el punto B (Meta).";
+            break;
+            case 3:
+            popText.innerHTML ="Avances y resultados parciales.<br><br> Brinda orientación y retroalimentación en todo momento.";
+            break;
+            case 4:
+            popText.innerHTML ="Meta y resultado final, Punto B.<br><br> Evalúa el resultado final de acuerdo con la realidad y a las expectativas. Reconoce los logros de tus colaboradores. Documenten el proceso.";
+            break;
+        }
+        //inPop = true;
+        popObj.css("display","block");
+        TweenMax.fromTo(popObj,1,{alpha:0,scale:0},{alpha:1,scale:1,onComplete:function(){inPop=true}}); 
+    }
+
+}
+
+
+
+    
+</script>
+</html>

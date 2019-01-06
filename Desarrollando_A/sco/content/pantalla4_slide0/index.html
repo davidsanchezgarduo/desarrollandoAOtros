@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>base 5</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+<div id="ContenedorPantalla" class="container h100">
+    <div class="bg5"></div>
+    <div class="rightContainer h100">
+    <div class="titulo5">
+        <h1>
+            Aprendizaje basado en retos:
+        </h1>
+    </div>
+    <div class="descripcion5">
+        <!--<span class="boldWhite"></span>
+        <br>-->
+        Esta técnica busca que los colaboradores <span class="boldWhite">a partir de
+		retos</span>, proporcionen soluciones o acciones efectivas; al mismo
+		tiempo que aprenden y descubren nuevas formas de hacer y actuar.
+    </div>
+
+    </div>
+</div>    
+    
+</body>
+<script src="../../js/jquery-3.1.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<!--<script src="../js/animacion.js"></script>-->
+
+<script>
+var an = [
+"alpha",
+"izq-der",
+"der-izq",
+"arriba-abajo",
+"abajo-arriba",
+"gira",
+"explota",
+"fold",
+"drop",
+"pulsate",
+"scale",
+"shake"
+]
+    //$("rightContainer").css("opacity",1)
+
+    //var obj0 = $(".rightContainer");
+    var obj1 = $(".bg5");
+    var obj2 = $(".titulo5");
+    var obj3 = $(".descripcion5");
+	//animacionentrada(obj,tipo,tiempo,retardo,funcionSigue);  
+	/*animacionentrada(obj0,an[0],0.5,0);
+	animacionentrada(obj1,an[0],1,1)     
+	animacionentrada(obj2,an[2],2,2)
+	animacionentrada(obj3,an[2],2,3)*/
+
+	TweenMax.fromTo(obj1,1,{alpha:0},{alpha:0.5,delay:1}); 
+	TweenMax.fromTo(obj2,2,{alpha:0},{alpha:0.5,delay:3}); 
+	TweenMax.fromTo(obj3,2,{alpha:0},{alpha:0.5,delay:4}); 
+   
+
+   var audio1 = new Audio();
+    audio1.src = "../audios/p4_s0.mp3"
+    audio1.addEventListener('load', function () {
+        audio1.play();
+    });
+        audio1.play();
+    
+    $(this).click(function(){
+        audio1.play();
+    })
+
+    
+</script>
+</html>
