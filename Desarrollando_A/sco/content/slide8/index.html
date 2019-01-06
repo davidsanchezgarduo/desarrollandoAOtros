@@ -9,17 +9,54 @@
 <style>
     .popUps{
         position: fixed;
-    }
-    .popUps div{
-        border: solid 1px white;
+        width: 20%;
+        text-align: center;
+        border: solid 1px black;
         border-radius: 10px;
+        z-index: 99;
+        margin-top: 10%;
+        margin-left: 5%;
+        font-size: 14px;
+        background-color: white;
+    }
+    .popUps:hover{
+        background-color: orange;
+        color: white;
+        border: solid 1px orange;
+    }
+    .modal{
+        position: fixed;
+        width: 60%;
+        margin-left: 20%;
+        height: 220px;
+        background-color: white;
+        border: solid 1px orange;
+        border-radius: 10px;
+        z-index: 9999;
+        display: none;
+        vertical-align: middle;
+        margin-top: 10%;
+        text-align: center;
+
+    }
+    button{
+        background-color: white;
+        border-radius: 10px;
+        border: solid 1px black;
     }
 </style>
 </head>
 
 <body>
+    <div class="modal" id="modal"></div>
+
+    <div style="width: 42%;" id="popsFinal" class="popUps" onclick="final(this);">“Desarrollar a otros”, consiste en favorecer el aprendizaje, adquisición o perfeccionamiento de las habilidades, conocimientos y actitudes necesarias para afrontar los retos del presente y del futuro a medida que progresen en su vida profesional.</div>
+    <div id="pops" class="popUps" onclick="show_modal(this)">Da clic en los recuadros para saber más.</div>
+    <div id="pops1" class="popUps" onclick="show_modal(this)">Personas comprometidas.<br>&nbsp;</div>
+    <div id="pops2" class="popUps" onclick="show_modal(this)">Líderes desarrolladores.<br>&nbsp;</div>
+    <div id="pops3" class="popUps" onclick="show_modal(this)">Corresponsables.<br>&nbsp;</div>
+    <div id="pops4" class="popUps" onclick="show_modal(this)">Innovadores y transformacionales.<br>&nbsp;</div>
 <div id="ContenedorPantalla">
-    <div class="popUps">Da clic en los recuadros para saber más.</div>
     <div class="bg8"></div>
     <div class="titulo2">
         <h1>
@@ -36,6 +73,7 @@
 <script src="../../js/animacion.js"></script>
 
 <script>
+    var contador = 0;
 var an = [
 "alpha",
 "izq-der",
@@ -54,14 +92,63 @@ var an = [
     var obj1 = $(".bg8");
     var obj2 = $(".titulo2");
     var obj3 = $(".bg2white");
+    var obj4 = $('#pops');
 //animacionentrada(obj,tipo,tiempo,retardo,funcionSigue);    
-animacionentrada(obj1,an[0],1,1)   
+animacionentrada(obj1,an[0],1,1)
 animacionentrada(obj2,an[2],2,1.5,enterSecond)
 
 function enterSecond(){
 	animacionentrada(obj3,an[2],2,0)
 }
-
-    
+function show_modal(div){
+    $('#modal').html('<div style="height:90%"><br><br><br>'+div.innerHTML+'</div><div style="height:10%;"><button onclick="oculta_modal();">Ok</button></div>');
+    $('#modal').fadeIn('slow');
+    div.style.display= 'none';
+    contador++;
+}
+var x = document.getElementsByClassName('popUps');
+$( document ).ready(function() {
+    $('#popsFinal').hide();
+    var a = 0;
+    var separacion = 0;
+    for (var i = 0; i < x.length; i++) {
+        if (x[i].id != 'popsFinal') {
+            var segundos  = (i*0.5)+1;
+            if (i%4==0&&i!=0) {
+                a=0;
+                separacion = separacion + 150;
+            }if (i==2) {
+                a=0;
+                separacion = 100;
+            }
+            var espaciado = (a * 280);
+            var obj4 = $('#'+x[i].id);
+            TweenMax.fromTo( 
+                obj4 , 
+                1 ,
+                { alpha:0,y:-200, x:espaciado },
+                { alpha:1,y:separacion, x:espaciado, delay:segundos} 
+            ); 
+            //alert(espaciado+' - '+separacion);
+            a++;
+        }
+    }
+    setTimeout('show_modal_uno()',4500);
+});
+    function show_modal_uno(){
+        $('#pops').click();
+    }
+    function oculta_modal(){
+        $('#modal').fadeOut('slow');
+        if (contador == 7) {
+            $('#popsFinal').show();        
+        }
+    }
+    function final(div){
+        if($('#'+div.id).html() == '<br><br>¡El desarrollo es en sí movimiento!<br>&nbsp;<br>&nbsp;'){
+            alert('Exit');
+        }
+        $('#'+div.id).html('<br><br>¡El desarrollo es en sí movimiento!<br>&nbsp;<br>&nbsp;');
+    }
 </script>
 </html>
