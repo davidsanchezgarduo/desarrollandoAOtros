@@ -101,7 +101,20 @@ function enterSecond(){
 	animacionentrada(obj3,an[2],2,0)
 }
 function show_modal(div){
-    $('#modal').html('<div style="height:90%"><br><br><br>'+div.innerHTML+'</div><div style="height:10%;"><button onclick="oculta_modal();">Ok</button></div>');
+    var html_modal = '';
+    switch (div.id){
+        case 'pops': html_modal = 'Da clic en los recuadros para saber más.';
+            break;
+        case 'pops1': html_modal = 'Se exigen día a día, aprenden de los errores, reflexionan sobre las causas y las convierten en oportunidades.';
+            break;
+        case 'pops2': html_modal = 'Desarrollan a otros y poseen un alto nivel de desempeño. Saben escuchar a sus colegas, jefes y colaboradores con atención y respeto. Utilizan la información para mejorar sus estrategias y métodos de trabajo.';
+            break;
+        case 'pops3': html_modal = ' Impulsan el aprendizaje y el desarrollo como parte de su labor diaria inherente a sus resultados. Tienen claras sus funciones y responsabilidades.';
+            break;
+        case 'pops4': html_modal = 'Se hacen cargo de sus tareas de forma dirigida. Visualizan objetivos propios más allá de los establecidos por la compañía y están dispuestos asumir nuevos desafíos; acompañándose de su equipo de trabajo.';
+            break;
+    }
+    $('#modal').html('<div style="height:90%"><br><br><br>'+html_modal+'</div><div style="height:10%;"><button onclick="oculta_modal();">Ok</button></div>');
     $('#modal').fadeIn('slow');
     div.style.display= 'none';
     contador++;
@@ -140,7 +153,7 @@ $( document ).ready(function() {
     }
     function oculta_modal(){
         $('#modal').fadeOut('slow');
-        if (contador == 7) {
+        if (contador == 5) {
             $('#popsFinal').show();        
         }
     }
