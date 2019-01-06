@@ -214,6 +214,15 @@ h1{
     background-position:50% 0%;
     background-color: white;
 }
+.bg8{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0%;
+    background-image: url("../img/bg8.jpg");
+    background-size: cover;
+    background-position:50% 0%;
+}
 
 .titulo1{
     position: absolute;
