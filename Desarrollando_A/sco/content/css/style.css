@@ -209,10 +209,10 @@ h1{
 }
 .bg8{
     position: absolute;
-    width: 50%;
+    width: 100%;
     height: 100%;
     left: 0%;
-    background-image: url("../img/bg8.jpg");
+    background-image: url("../../img/city2.svg");
     background-size: cover;
     background-position:50% 0%;
 }

@@ -7,17 +7,28 @@
 <title>base 2</title>
 <link rel="stylesheet" href="../css/style.css">
 <style>
+.boton_ok{
+    padding: 1vW;
+    bottom: 0;
+    position: absolute;
+    margin:1%;
+    left:50%;
+    transform: translate(-50%,0);
+    cursor: pointer;
+}
     .popUps{
         position: fixed;
-        width: 20%;
+        width: 10%;
+        padding: 0.7vw;
         text-align: center;
-        border: solid 1px black;
+        border: solid 1px #333;
         border-radius: 10px;
         z-index: 99;
         margin-top: 10%;
         margin-left: 5%;
         font-size: 14px;
-        background-color: white;
+        color:#333;
+        cursor: pointer;
     }
     .popUps:hover{
         background-color: orange;
@@ -30,13 +41,14 @@
         margin-left: 20%;
         height: 220px;
         background-color: white;
-        border: solid 1px orange;
+        border: solid 1px white;
         border-radius: 10px;
         z-index: 9999;
         display: none;
         vertical-align: middle;
         margin-top: 10%;
         text-align: center;
+        padding: 1vw;
 
     }
     button{
@@ -52,10 +64,10 @@
 
     <div style="width: 42%;" id="popsFinal" class="popUps" onclick="final(this);">“Desarrollar a otros”, consiste en favorecer el aprendizaje, adquisición o perfeccionamiento de las habilidades, conocimientos y actitudes necesarias para afrontar los retos del presente y del futuro a medida que progresen en su vida profesional.</div>
     <!--<div id="pops" class="popUps" onclick="show_modal(this)">Da clic en los recuadros para saber más.</div>-->
-    <div id="pops1" class="popUps" onclick="show_modal(this)">Personas comprometidas.<br>&nbsp;</div>
-    <div id="pops2" class="popUps" onclick="show_modal(this)">Líderes desarrolladores.<br>&nbsp;</div>
-    <div id="pops3" class="popUps" onclick="show_modal(this)">Corresponsables.<br>&nbsp;</div>
-    <div id="pops4" class="popUps" onclick="show_modal(this)">Innovadores y transformacionales.<br>&nbsp;</div>
+    <div id="pops1" class="popUps" onclick="show_modal(this)">Personas comprometidas.</div>
+    <div id="pops2" class="popUps" onclick="show_modal(this)">Líderes desarrolladores.</div>
+    <div id="pops3" class="popUps" onclick="show_modal(this)">Corresponsables.</div>
+    <div id="pops4" class="popUps" onclick="show_modal(this)">Innovadores y transformacionales.</div>
 <div id="ContenedorPantalla">
     <div class="bg8"></div>
     <div class="titulo2">
@@ -65,7 +77,7 @@
         </h1>
     </div>
 </div>    
-    <audio id="audio1" src="../audios/slide8.mp3" controls=""></audio>
+    <audio id="audio1" src="../audios/slide8.mp3"></audio>
 </body>
 <script src="../../js/jquery-3.1.0.min.js"></script>
 <script src="../../js/jquery.gsap.min.js"></script>    
@@ -76,11 +88,13 @@
     function selecciona_opcion(numero){
         var x = document.getElementsByClassName('popUps');
         for (var i = 0; i < x.length; i++) {
-            x[i].style.backgroundColor = 'white';
-            x[i].style.color = 'black';
+            x[i].style.backgroundColor = 'transparent';
+            x[i].style.color = '#333';
+            x[i].style.border = 'solid 1px #333';
         }
         $('#pops'+numero).css('backgroundColor','orange');
         $('#pops'+numero).css('color','white');
+        $('#pops'+numero).css('border','solid 1px white');
     }
     function audio(){
         audio1.play();
@@ -114,7 +128,7 @@ var an = [
     var obj3 = $(".bg2white");
     var obj4 = $('#pops');
 //animacionentrada(obj,tipo,tiempo,retardo,funcionSigue);    
-animacionentrada(obj1,an[0],1,1)
+TweenMax.fromTo(obj1,1,{alpha:0},{alpha:0.3,delay:1});
 animacionentrada(obj2,an[2],2,1.5,enterSecond)
 
 function enterSecond(){
@@ -134,7 +148,7 @@ function show_modal(div){
         case 'pops4': html_modal = 'Se hacen cargo de sus tareas de forma dirigida. Visualizan objetivos propios más allá de los establecidos por la compañía y están dispuestos asumir nuevos desafíos; acompañándose de su equipo de trabajo.';
             break;
     }
-    $('#modal').html('<div style="height:90%"><br><br><br>'+html_modal+'</div><div style="height:10%;"><button onclick="oculta_modal();">Ok</button></div>');
+    $('#modal').html('<div style="height:auto"><br><br><br>'+html_modal+'</div><div style="height:auto;"><button onclick="oculta_modal();" class="boton_ok">Ok</button></div>');
     $('#modal').fadeIn('slow');
     div.style.display= 'none';
     contador++;
