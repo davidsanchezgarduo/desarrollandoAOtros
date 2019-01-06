@@ -51,7 +51,7 @@
     <div class="modal" id="modal"></div>
 
     <div style="width: 42%;" id="popsFinal" class="popUps" onclick="final(this);">“Desarrollar a otros”, consiste en favorecer el aprendizaje, adquisición o perfeccionamiento de las habilidades, conocimientos y actitudes necesarias para afrontar los retos del presente y del futuro a medida que progresen en su vida profesional.</div>
-    <div id="pops" class="popUps" onclick="show_modal(this)">Da clic en los recuadros para saber más.</div>
+    <!--<div id="pops" class="popUps" onclick="show_modal(this)">Da clic en los recuadros para saber más.</div>-->
     <div id="pops1" class="popUps" onclick="show_modal(this)">Personas comprometidas.<br>&nbsp;</div>
     <div id="pops2" class="popUps" onclick="show_modal(this)">Líderes desarrolladores.<br>&nbsp;</div>
     <div id="pops3" class="popUps" onclick="show_modal(this)">Corresponsables.<br>&nbsp;</div>
@@ -65,7 +65,7 @@
         </h1>
     </div>
 </div>    
-    
+    <audio id="audio1" src="../audios/slide8.mp3" controls=""></audio>
 </body>
 <script src="../../js/jquery-3.1.0.min.js"></script>
 <script src="../../js/jquery.gsap.min.js"></script>    
@@ -73,6 +73,26 @@
 <script src="../../js/animacion.js"></script>
 
 <script>
+    function selecciona_opcion(numero){
+        var x = document.getElementsByClassName('popUps');
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.backgroundColor = 'white';
+            x[i].style.color = 'black';
+        }
+        $('#pops'+numero).css('backgroundColor','orange');
+        $('#pops'+numero).css('color','white');
+    }
+    function audio(){
+        audio1.play();
+        setTimeout('audio2()', 4000);
+    }
+    function audio2(){
+        audio1.src="../audios/slide8_1.mp3";
+        audio1.play();
+    }
+    function pausa(){
+        audio1.pause();
+    }
     var contador = 0;
 var an = [
 "alpha",
@@ -103,8 +123,8 @@ function enterSecond(){
 function show_modal(div){
     var html_modal = '';
     switch (div.id){
-        case 'pops': html_modal = 'Da clic en los recuadros para saber más.';
-            break;
+        /*case 'pops': html_modal = 'Da clic en los recuadros para saber más.';
+            break;*/
         case 'pops1': html_modal = 'Se exigen día a día, aprenden de los errores, reflexionan sobre las causas y las convierten en oportunidades.';
             break;
         case 'pops2': html_modal = 'Desarrollan a otros y poseen un alto nivel de desempeño. Saben escuchar a sus colegas, jefes y colaboradores con atención y respeto. Utilizan la información para mejorar sus estrategias y métodos de trabajo.';
@@ -121,6 +141,12 @@ function show_modal(div){
 }
 var x = document.getElementsByClassName('popUps');
 $( document ).ready(function() {
+        setTimeout('audio()', 1000);
+        setTimeout('selecciona_opcion(1)', 9500);
+        setTimeout('selecciona_opcion(2)', 18000);
+        setTimeout('selecciona_opcion(3)', 32000);
+        setTimeout('selecciona_opcion(4)', 44000);
+        setTimeout('pausa()', 57000);
     $('#popsFinal').hide();
     var a = 0;
     var separacion = 0;
@@ -146,21 +172,24 @@ $( document ).ready(function() {
             a++;
         }
     }
-    setTimeout('show_modal_uno()',4500);
+    //setTimeout('show_modal_uno()',4500);
 });
-    function show_modal_uno(){
+    /*function show_modal_uno(){
         $('#pops').click();
-    }
+    }*/
     function oculta_modal(){
         $('#modal').fadeOut('slow');
-        if (contador == 5) {
-            $('#popsFinal').show();        
+        if (contador == 4) {
+            $('#popsFinal').fadeIn('slow');
+            audio1.play();
+            setTimeout('pausa()', 17000)
         }
     }
     function final(div){
         if($('#'+div.id).html() == '<br><br>¡El desarrollo es en sí movimiento!<br>&nbsp;<br>&nbsp;'){
             location.href="../slide9/index.html";
         }
+        audio1.play();
         $('#'+div.id).html('<br><br>¡El desarrollo es en sí movimiento!<br>&nbsp;<br>&nbsp;');
     }
 </script>

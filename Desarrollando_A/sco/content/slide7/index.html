@@ -59,8 +59,7 @@
 
 
 </div>    
-   <audio id="audio1" src="../audios/slide7.mp3" controls=""></audio> 
-   <audio id="audio2" src="../audios/slide7.mp3"></audio> 
+   <audio id="audio1" src="../audios/slide7.mp3" ></audio>
 </body>
 <script src="../../js/jquery-3.1.0.min.js"></script>
 <script src="../../js/jquery.gsap.min.js"></script>    
@@ -99,12 +98,8 @@ var textos = [
                 {cadena:"Creatividad, autoestima, autocrítica y motivación..",tiempo:19,icono:"icono"},
                 {cadena:"“Los líderes sobresalen por la manera de aumentarel autoestima de su personal.Si las personas creen en sí mismas,es increíble todo aquello que pueden lograr.”<br><br>Sam Walton.", tiempo:23}
                 ];
-
+setTimeout('audio2();',24510);
 for (var i = 0; i < textos.length; i++) {
-    if (i == (textos.length-1)) {
-        alert('sam walton');
-        audio2.play(); 
-    }
     animacionsalida($("#ob2"),tipo[4],1,textos[i].tiempo,next1,[textos[i].cadena,textos[i].icono]);
 }
    function next1(obj,icono){
@@ -113,6 +108,10 @@ for (var i = 0; i < textos.length; i++) {
             $('#ob2').append('<br><img src="../../img/'+icono+'.png">');
         }
         animacionentrada($("#ob2"),tipo[4],1,0);
+    }
+    function audio2(){
+        audio1.src="../audios/slide7_1.mp3";
+        audio1.play(); 
     }
 </script>
 </html>
