@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>base 1</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+
+<style type="text/css">
+    #ob1{
+        font-size: 3em;
+    }
+
+    .vcenter{
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+        text-align: center;
+    }
+
+    #text{
+        font-size: 2em;
+    }
+</style>
+
+<body>
+    <div id="ob0" class="bg1"></div>
+<div id="ContenedorPantalla" class="container h100">
+    
+<!--
+    <div class="titleSlide">
+        <h1>Este es el título</h1>
+    </div>
+-->
+    
+    <section class="row vcenter">
+            <div class="col-sm-12">
+                    
+                <h1 id="ob1" class="text-black">Felicidades</h1><br>
+                <span id="text">Has terminado el módulo: Desarrollando a otros.<br>
+Continúa con tu aprendizaje</span>
+            </div>
+            
+    </section>
+    
+    
+   
+
+</div>    
+    
+</body>
+<script src="../../js/jquery-3.1.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+
+<script>
+var an = [
+"alpha",
+"izq-der",
+"der-izq",
+"arriba-abajo",
+"abajo-arriba",
+"gira",
+"explota",
+"fold",
+"drop",
+"pulsate",
+"scale",
+"shake"
+]
+
+    var obj1 = $(".bg1");
+    var obj2 = $("#ob1");
+    var obj3 = $("#text");
+
+    TweenMax.fromTo(obj1,1,{alpha:0},{alpha:0.5,delay:0.5}); 
+    TweenMax.fromTo(obj2,2,{alpha:0},{alpha:1,delay:0.5}); 
+    TweenMax.fromTo(obj3,2,{alpha:0},{alpha:1,delay:2}); 
+    
+</script>
+</html>
