@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>base 5</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<style type="text/css">
+    .hiddenText{
+        opacity: 0;
+    }
+
+    #text5{
+        font-weight: bold;
+    }
+</style>
+
+<body>
+<div id="ContenedorPantalla" class="container h100">
+    <div class="bg1"></div>
+    <div class="titulo3" id="text1">
+        <h1>
+            ¿Cuál es la importancia de esta técnica para FANDELI?
+        </h1>
+    </div>
+
+    <div class="titulo3 hiddenText" id="text2">
+        <h1>
+            Existen diversas herramientas para abordar el
+aprendizaje basado en problemas. Desde las de mejora
+continua, hasta las de análisis de problemas y toma de
+decisiones.
+        </h1>
+    </div>
+
+    <div class="titulo3 hiddenText" id="text3">
+        <h1>
+            Cada una de ellas responde a estilo y necesidades
+específicas: aspectos técnicos, urgencia, profundidad, etc.
+        </h1>
+    </div>
+
+    <div class="titulo3 hiddenText" id="text4">
+        <h1>
+            Lo importante aquí, es reconocer el hecho de que
+resolver problemas genera aprendizaje; y este aprendizaje sólo
+es de valor si con ello se evoluciona a una mejor condición.
+        </h1>
+    </div>
+
+    <div class="titulo3 hiddenText" id="text5">
+        <h1>
+            ¡Todo empresa hoy, deber asumirse como un centro de
+aprendizaje!
+        </h1>
+    </div>
+
+    </div>
+</div>    
+    
+</body>
+<script src="../../js/jquery-3.1.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<!--<script src="../js/animacion.js"></script>-->
+
+<script>
+var an = [
+"alpha",
+"izq-der",
+"der-izq",
+"arriba-abajo",
+"abajo-arriba",
+"gira",
+"explota",
+"fold",
+"drop",
+"pulsate",
+"scale",
+"shake"
+]
+
+    var obj0 = $(".bg5");
+    var obj1 = $("#text1");
+    var obj2 = $("#text2");
+    var obj3 = $("#text3");
+    var obj4 = $("#text4");
+    var obj5 = $("#text5");
+
+
+	TweenMax.fromTo(obj0,1,{alpha:0},{alpha:0.5,delay:0}); 
+	TweenMax.fromTo(obj1,1,{alpha:0},{alpha:1,delay:0, onComplete:end1}); 
+	//TweenMax.fromTo(obj3,2,{alpha:0,x:100},{alpha:0.5,x:0,delay:2}); 
+    //TweenMax.fromTo(obj4,2,{alpha:0,x:100},{alpha:0.5,x:0,delay:13}); 
+    
+    function end1(){
+        TweenMax.fromTo(obj1,1,{alpha:1},{alpha:0,delay:1}); 
+        TweenMax.fromTo(obj2,1,{alpha:0},{alpha:1,delay:1.5,onComplete:end2}); 
+    }
+
+    function end2(){
+        TweenMax.fromTo(obj2,1,{alpha:1},{alpha:0,delay:9}); 
+        TweenMax.fromTo(obj3,1,{alpha:0},{alpha:1,delay:9.5,onComplete:end3}); 
+    }
+
+    function end3(){
+        TweenMax.fromTo(obj3,1,{alpha:1},{alpha:0,delay:8}); 
+        TweenMax.fromTo(obj4,1,{alpha:0},{alpha:1,delay:8.5,onComplete:end4}); 
+    }
+
+    function end4(){
+        TweenMax.fromTo(obj4,1,{alpha:1},{alpha:0,delay:16}); 
+        TweenMax.fromTo(obj5,1,{alpha:0},{alpha:1,delay:16.5,onComplete:end5}); 
+    }
+
+    function end5(){
+
+    }
+
+   var audio1 = new Audio();
+    audio1.src = "../audios/p5_s2.mp3"
+    audio1.addEventListener('load', function () {
+        audio1.play();
+    });
+        audio1.play();
+    
+    $(this).click(function(){
+        audio1.play();
+    })
+
+    
+</script>
+</html>

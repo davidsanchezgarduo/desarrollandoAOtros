@@ -1,0 +1,388 @@
+@font-face {
+    font-family: "Century";
+    src: url("../../fonts/GOTHIC.TTF") format("opentype");
+    }
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Century' !important;
+    background-color: #f0a10e;
+    overflow: hidden;
+
+}
+
+h1{
+    font-size: 3em;
+    
+}
+
+.bgImg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0a10e;
+}
+
+.bgImg img{
+    transform: translate(0%,0%);
+    opacity: 0.5;
+    transition: transform 20s;
+}
+
+.moveImg{
+    transform: translate(-100%,0%);
+}
+
+.container{
+    position: absolute;
+    width: 98% !important;
+    margin: 1%;
+    left: 1%;
+    padding: 1%;
+}  
+
+.titleSlide{
+    position: absolute;
+            
+}
+        
+.text{
+    padding: 1%;
+    font-size: 2em;
+}
+
+.text-orange{
+    color: #f0a10e;
+}
+.text-white{
+    color: #FFF;
+}
+.text-black{
+    color: black;
+    /*color: #333;  */
+}
+
+.card{
+    text-align: center;
+    background-color: rgba(250,250,250,0.5);
+    border-radius: 1vw;
+    margin: 1%;
+    padding: 1%;
+}
+        
+.h100{
+    height: 100%;
+}        
+.w100{
+    width: 100%;
+}
+
+        .vcenter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .imageSlide{
+            width: 100%;
+            text-align: center;
+        }
+        
+         .img90{
+            width: 90%;
+        }  
+        
+        .img80{
+            width: 80%;
+        }        
+        .img70{
+            width: 70%;
+        }        
+        .img60{
+            width: 60%;
+        }        
+        .img50{
+            width: 50%;
+        }        
+        .img40{
+            width: 40%;
+        }        
+        .img30{
+            width: 30%;
+        }      
+        .img20{
+            width: 20%;
+        }      
+        .img10{
+            width: 10%;
+        }
+.containerWhite{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    
+}
+
+
+.bg1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    background-image: url("../img/bg1.png");
+    background-size: cover;
+    background-position:20% 50%;
+    
+    background-blend-mode:multiply;
+}
+
+.bg2{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0%;
+    background-image: url("../img/bg2.png");
+    background-size: cover;
+    background-position:50% 0%;
+}
+
+.bg3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    background-image: url("../img/bg2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:bottom center;
+}
+
+.bg4{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    background-image: url("../img/bg1.png");
+    background-size: cover;
+    background-position:50% 0%;
+    background-color: white;
+}
+
+.bg4{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    background-image: url("../img/bg1.png");
+    background-size: cover;
+    background-position:50% 0%;
+    background-color: white;
+}
+
+.bg5{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0%;
+    background-image: url("../img/bg1.png");
+    background-size: cover;
+    background-position:50% 0%;
+    background-color: #f0a10e;
+    background-blend-mode:multiply;
+}
+
+.bg6{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0%;
+    background-image: url("../img/bg1.png");
+    background-size: cover;
+    background-position:50% 0%;
+    background-color: white;
+}
+.bg8{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0%;
+    background-image: url("../img/bg8.jpg");
+    background-size: cover;
+    background-position:50% 0%;
+}
+
+.titulo1{
+    position: absolute;
+    color:white;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-75%,-50%);
+    font-size: 2em;
+}
+
+.titulo2{
+    position: absolute;
+    color:white;
+    top: 50%;
+    left: 40%;
+    width: 120%;
+    transform: translate(0%,-50%);
+    font-size: 0.5em;
+    padding-left: 10%; 
+}
+
+.titulo3{
+    position: absolute;
+    color:white;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1em;
+    text-align: center;
+}
+
+.titulo4{
+    position: absolute;
+    color:#f0a10e;
+    top: 10%;
+    left: 10%;
+
+    font-size: 1.5em;
+}
+
+
+.titulo5{
+    position: relative;
+    color:white;
+    width: 100%;
+    background-color:#f9bc61;
+    font-size: 1.5em;
+    padding-left: 20px;
+}
+
+.titulo6{
+    position: relative;
+    color:#f9bc61;
+    width: 100%;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+.bgwhite{
+    background-color: white;
+    padding:0 10% 0 2%;
+    color:#f0a10e;
+}
+
+.bg2white{
+    position: relative;
+    left: -10%;
+    background-color: white;
+    width: 100%;
+    padding:0 40% 0 15%;
+    color:#f0a10e;
+    opacity: 0;
+}
+
+
+.lineLeft{
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    top:30%;
+    left: -65%;
+}
+
+.lineRight{
+    position: absolute;
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    bottom:30%;
+    right: -65%;
+}
+
+.subtitulo3{
+    position: absolute;
+    color:white;
+    bottom: 20%;
+    right: 20%;
+    font-size: 0.5em;
+    text-align: left;
+    opacity: 0.6;
+}
+
+.combination4{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(0%,-50%);
+
+}
+
+.combination{
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.combinationImage{
+    height: 100%;
+}
+
+.combinationText{
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    //height: 100%;
+    color:black;
+    font-weight: bold;
+    font-size: 2em;
+    transform: translate(0%,-50%);
+
+}
+
+.rightContainer{
+    position: absolute;
+    top:10%;
+    left: 50%;
+    width: 50%;
+
+}
+.descripcion5{
+    position: relative;
+    left: 0%;
+    font-size: 1.2em;
+    color:#fedd9b;
+    padding-right: 50px;
+
+}
+
+.descripcion6{
+    position: relative;
+    font-size: 1em;
+    color:black;
+    text-align: center;
+    padding: 0 10% 0 10%;
+
+}
+
+.boldWhite{
+    color:white;
+    font-weight: bold;
+}
+
+.bold{
+    font-weight: bold;
+}
