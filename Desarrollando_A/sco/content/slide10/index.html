@@ -10,8 +10,16 @@
 </head>
 <style>
     
+    
+    .bgImg img {
+    transform: translate(0%,0%);
+    opacity: 0.5;
+    transition: height 1s
+}
+    
     body{
-        background-color: #f0a10e;
+        background-color: #FFF;
+        color:#f0a10e;
     }
     
 .bgImg{
@@ -20,6 +28,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: #FFF;
     
 }
 
@@ -56,8 +65,8 @@ button{
 
     <section class="row vcenter">
             <div class="col-sm-6">
-	            <h1 id="ob1" class="text-white">PREGUNTA 1</h1>
-	            <div id="ob2" class="text text-white">
+	            <h1 id="ob1" class="text-orange">PREGUNTA 1</h1>
+	            <div id="ob2" class="text text-orange">
 	                <p id="txt1"></p>
 	                <br><br>
 	                <div class="row">
@@ -73,7 +82,7 @@ button{
             </div>
             <div class="col-sm-6">
                 <div  id="ob3" class="imageSlide">
-                   <p  class="text text-white"></p>
+                   <p  class="text text-orange"></p>
                 </div>
             </div>
     </section>
@@ -84,6 +93,7 @@ button{
 </body>
 <script src="../../js/jquery-3.1.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script src="../../js/jquery-ui.js"></script>
 <script src="../../js/animacion.js"></script>
 
 
@@ -109,6 +119,7 @@ var tipo = [
 "shake"
 ];
 //animacionentrada($("#arrow_up"),tipo[4],3,0);
+    var humito = $('#jenga6');
 TweenMax.fromTo( 
     $("#ob0") , 
     1 ,
@@ -144,9 +155,10 @@ function responder(posicion, correcta){
             for (var i = 1; i < 5; i++) {
                 $('#jenga'+i).fadeOut('slow');
             }
-            var humito = $('#jenga6');
+            
             humito.show();
-            TweenMax.fromTo(humito,2,{scale:0,alpha:1},{scale:1,alpha:1,ease:Back.easeOut})
+            $("#jenga5").show();
+            TweenMax.fromTo(humito,3,{scale:0.5,alpha:1},{scale:2,alpha:0,ease:Back.easeOut})
 		}
 
 		next_question();
