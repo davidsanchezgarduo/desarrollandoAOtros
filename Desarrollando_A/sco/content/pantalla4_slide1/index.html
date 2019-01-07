@@ -1,0 +1,298 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>base 1</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+</head>
+
+<style type="text/css">
+    .card{
+        border-radius: 20px;
+        border: 2px solid black;
+        padding: 0 10px 0 10px;
+    }
+
+    .freeSpace{
+        width: 200px;
+    }
+    #title{
+        text-align: center;
+        padding-top: 20px;
+    }
+    #final{
+        text-align: center;
+        padding-top: 20px;
+    }
+    #table1{
+        padding-top: 20px;
+    }
+</style>
+
+<body>
+    <div id="ob0" class="bg4"></div>
+<div id="ContenedorPantalla" class="container">
+
+    <section class="row vcenter">
+            <div class="col-sm-12" id="title" >
+                    
+                <h3 id="ob1" class="text-black">Relaciona las siguientes columnas, para descubrir las
+aplicaciones del aprendizaje basado en retos.</h3>
+                
+            </div>
+            
+    </section>
+    
+    
+    <section class="row vcenter">
+        
+            <div id="table1" class="col-sm-12">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="card" id="i1">
+                            </div>
+                        </td>
+                        <td class="freeSpace">
+                            
+                        
+                        </td>
+                        <td>
+                            <div class="card" id="d1">
+                            
+                        </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="card" id="i2">
+                            </div>
+                        </td>
+                        <td class="freeSpace">
+                            
+                        </td>
+                        <td>
+                             <div class="card" id="d2">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="card" id ="i3">
+                        </div>
+                        </td>
+                        <td class="freeSpace">
+                           
+                        </td>
+                        <td>
+                            <div class="card" id ="d3">
+                        </div>
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+            
+    </section>
+    <section class="row vcenter">
+        <div class="col-sm-12" id="final">
+                    
+            <h3 class="text-black">Un proyecto basado en retos, debe tener los tres enfoques anteriores.<br><br> Continua con tu aprendizaje.</h3>
+                
+            </div>
+    </section>
+
+</div>    
+    
+</body>
+<script src="../../js/jquery-3.1.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<!--<script src="../js/animacion.js"></script>-->
+
+
+<script>
+var an = [
+"alpha",
+"izq-der",
+"der-izq",
+"arriba-abajo",
+"abajo-arriba",
+"gira",
+"explota",
+"fold",
+"drop",
+"pulsate",
+"scale",
+"shake"
+]
+//    
+//    var obj1 = $(".bg1");
+//    var obj2 = $(".titulo1");
+//
+//animacionentrada(obj,tipo,tiempo,retardo,funcionSigue);    
+//animacionentrada(obj1,an[0],1,1)   
+//animacionentrada(obj2,an[1],2,1.5);
+
+var i1 = $("#i1");
+var i2 = $("#i2");
+var i3 = $("#i3");
+var d1 = $("#d1");
+var d2 = $("#d2");
+var d3 = $("#d3");
+var clicked1;
+var clicked2;
+var fromBadClick =false; 
+
+i1.click(function(e){
+    clickI(1);
+})
+i2.click(function(e){
+    clickI(2);
+})
+i3.click(function(e){
+    clickI(3);
+})
+
+d1.click(function(e){
+    clickD(1);
+})
+d2.click(function(e){
+    clickD(2);
+})
+d3.click(function(e){
+    clickD(3);
+})
+
+
+init();
+function init(){
+    var dataI = ["<h3>Resolver</h3>","<h3>Mejorar</h3>","<h3>Innovar</h3>"];
+    var dataD = ["<h3>Dar solución a problemas del negocio recurrentes o emergentes.</h3>","<h3>Establecer una ruta de madurez, movimiento o mejora específica o continua, para alcanzar el futuro de forma óptima y controlada.</h3>","<h3>Generar un proyecto, programa o acción siguiendo caminos distintos a los conocidos con herramientas también diferentes o nuevas; buscando anticipar el futuro.</h3>"]
+    var idsI = [0,1,2];
+    var idsD = [0,1,2];
+    for(var i =0; i < 3; i++){
+        var min = 0; var max =idsI.length-1;
+        var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+        var id = idsI[random];
+        $("#i"+(i+1)).html(dataI[id]);
+        //$("#i"+(i+1)).valueColum = random;
+        $("#i"+(i+1)).attr("valueColum",id)
+        var temp = i+1;
+        
+        idsI.splice(random,1)
+
+        random =Math.floor(Math.random() * (+max - +min)) + +min;
+        var id = idsD[random]; 
+        $("#d"+(i+1)).html(dataD[id]);
+        $("#d"+(i+1)).attr("valueColum",id)
+        
+        idsD.splice(random,1)
+    }
+
+}
+
+function clickI(id){
+    console.log("click",fromBadClick)
+    if(fromBadClick){
+        clicked1.css("border","2px solid black")
+        clicked2.css("border","2px solid black")
+        clicked1 = null;
+        clicked2 = null;
+        fromBadClick = false;
+    }
+
+    if(clicked1!=null){
+        clicked1.css("border","2px solid black")
+
+    }
+
+    clicked1 = $("#i"+id);
+    console.log(clicked1,id);
+    clicked1.css("border","2px solid green")
+    if(clicked2 != null){
+        evaluate();
+    }
+}
+
+function clickD(id){
+    console.log("click 2",fromBadClick);
+    if(fromBadClick){
+        clicked1.css("border","2px solid black")
+        clicked2.css("border","2px solid black")
+        clicked1 = null;
+        clicked2 = null;
+        fromBadClick = false;
+    }
+    if(clicked2!=null){
+        clicked2.css("border","2px solid black")
+    }
+
+    clicked2 = $("#d"+id)
+    clicked2.css("border","2px solid green")
+    if(clicked1 != null){
+        evaluate();
+    }
+}
+
+function evaluate(){
+    console.log("evaluate ",clicked1.attr("valueColum"),clicked2.attr("valueColum"));
+    if(clicked1.attr("valueColum") == clicked2.attr("valueColum")){
+        var color = "";
+        if(clicked1.attr("valueColum") == 0){
+            color = "#00b050";
+        }
+        else if(clicked1.attr("valueColum") == 1){
+            color = "#00b0f0";
+        }
+        else {
+            color = "#F4B083";
+        }
+
+        clicked1.css("background-color",color);
+        clicked1.css("border","2px solid "+color);
+        clicked2.css("background-color",color);
+        clicked2.css("border","2px solid "+color);
+
+        clicked1.unbind("click");
+        clicked2.unbind("click");
+
+        clicked1 = null;
+        clicked2 = null;
+    }
+    else{
+        clicked1.css("border","2px solid red");
+        clicked2.css("border","2px solid red");
+        fromBadClick = true;
+    }
+}
+
+var obj0 = $(".bg4");
+    var obj1 = $("#title");
+    var obj2 = $("#table1");
+    var obj3 = $("#final");
+
+    TweenMax.fromTo(obj0,1,{alpha:0},{alpha:0.5,delay:0}); 
+    TweenMax.fromTo(obj1,1,{alpha:0},{alpha:1,delay:0}); 
+    TweenMax.fromTo(obj2,1,{alpha:0},{alpha:1,delay:0}); 
+    TweenMax.fromTo(obj3,1,{alpha:0},{alpha:1,delay:0}); 
+
+var audio1 = new Audio();
+    audio1.src = "../audios/p4_s1.mp3"
+    audio1.addEventListener('load', function () {
+        audio1.play();
+    });
+        audio1.play();
+    
+    $(this).click(function(){
+        audio1.play();
+        $(this).unbind("click");
+    })
+
+
+
+    
+</script>
+</html>
