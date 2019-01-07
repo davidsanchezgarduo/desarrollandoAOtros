@@ -158,11 +158,19 @@ function responder(posicion, correcta){
             
             humito.show();
             $("#jenga5").show();
-            TweenMax.fromTo(humito,3,{scale:0.5,alpha:1},{scale:2,alpha:0,ease:Back.easeOut})
+            TweenMax.fromTo(humito,3,{scale:0.5,alpha:1},{scale:2,alpha:0,ease:Back.easeOut});
+            contador--;
+            setTimeout('reacondicionar()',2000);
 		}
 
 		next_question();
 	
+}
+function reacondicionar(){
+    $('#jenga5').fadeOut('slow');
+    for (var i = contador; i < 5; i++) {
+        $('#jenga'+i).fadeIn('slow');
+    }
 }
 function next_question(){
 	if (contador == (textos.length)) {
@@ -212,7 +220,7 @@ function next(){
         audio1.play();
     }
     function terminar(){
-        location.href="../slide11/index.html"
+        //location.href="../slide11/index.html"
     }
 next_question();
 </script>
