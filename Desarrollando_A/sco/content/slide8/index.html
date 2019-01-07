@@ -182,22 +182,20 @@ $( document ).ready(function() {
                 { alpha:0,y:-200, x:espaciado },
                 { alpha:1,y:separacion, x:espaciado, delay:segundos} 
             ); 
-            //alert(espaciado+' - '+separacion);
             a++;
         }
     }
-    //setTimeout('show_modal_uno()',4500);
 });
-    /*function show_modal_uno(){
-        $('#pops').click();
-    }*/
     function oculta_modal(){
         $('#modal').fadeOut('slow');
         if (contador == 4) {
             $('#popsFinal').fadeIn('slow');
             audio1.play();
-            setTimeout('pausa()', 17000)
+            setTimeout('click_final()', 17000)
         }
+    }
+    function click_final(){
+        $('#popsFinal').click();
     }
     function final(div){
         if($('#'+div.id).html() == '<br><br>¡El desarrollo es en sí movimiento!<br>&nbsp;<br>&nbsp;'){
